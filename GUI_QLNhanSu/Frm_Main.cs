@@ -19,37 +19,38 @@ namespace GUI_QLNhanSu
 
         private void chấmCôngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmChamCong fcc = new FrmChamCong();
-
-            fcc.TopLevel = false;
-            fcc.Dock = DockStyle.Fill;
-            panel1.Controls.Add(fcc);
-            fcc.Show();
+            FrmChamCong Fcc = new FrmChamCong();
+            Fcc.TopLevel = false;
+            Fcc.Dock = DockStyle.Fill;
+            panel1.Controls.Add(Fcc);
+            Fcc.Show();
         }
 
         private void đăngNhậpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmDangNhap fdn = new FrmDangNhap();
-            fdn.Show();
+            FrmDangNhap Fdn = new FrmDangNhap();
+            Fdn.MdiParent = this;
+            Fdn.Show();
         }
 
         private void nhânViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmNhanVien fnv = new FrmNhanVien();
-            fnv.TopLevel = false;
-            fnv.Dock = DockStyle.Fill;
-            panel1.Controls.Add(fnv);
+            panel1.Visible = true;
+            FrmNhanVien Fnv = new FrmNhanVien();
+            Fnv.TopLevel = false;
+            Fnv.Dock = DockStyle.Fill;
+            panel1.Controls.Add(Fnv);
            
-            fnv.Show();
+            Fnv.Show();
         }
 
         private void hợpĐồngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmHopDong fhd = new FrmHopDong();
-            fhd.TopLevel = false;
-            fhd.Dock = DockStyle.Fill;
-            panel1.Controls.Add(fhd);
-            fhd.Show();
+            FrmHopDong Fhd = new FrmHopDong();
+            Fhd.TopLevel = false;
+            Fhd.Dock = DockStyle.Fill;
+            panel1.Controls.Add(Fhd);
+            Fhd.Show();
         }
 
         private void khenThưởngKỷLuậtToolStripMenuItem_Click(object sender, EventArgs e)
@@ -96,6 +97,18 @@ namespace GUI_QLNhanSu
             panel1.Controls.Add(Ftk);
             Ftk.Show();
             //bbbb
+        }
+
+        private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void đồiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmDoiMK Fdmk = new FrmDoiMK();
+            Fdmk.MdiParent = this;
+            Fdmk.Show();
         }
     }
 }

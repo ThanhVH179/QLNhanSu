@@ -76,27 +76,29 @@
             // đăngNhậpToolStripMenuItem
             // 
             this.đăngNhậpToolStripMenuItem.Name = "đăngNhậpToolStripMenuItem";
-            this.đăngNhậpToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.đăngNhậpToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.đăngNhậpToolStripMenuItem.Text = "Đăng nhập ";
             this.đăngNhậpToolStripMenuItem.Click += new System.EventHandler(this.đăngNhậpToolStripMenuItem_Click);
             // 
             // đăngXuấtToolStripMenuItem
             // 
             this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
             // 
             // đồiMậtKhẩuToolStripMenuItem
             // 
             this.đồiMậtKhẩuToolStripMenuItem.Name = "đồiMậtKhẩuToolStripMenuItem";
-            this.đồiMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.đồiMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.đồiMậtKhẩuToolStripMenuItem.Text = "Đồi mật khẩu";
+            this.đồiMậtKhẩuToolStripMenuItem.Click += new System.EventHandler(this.đồiMậtKhẩuToolStripMenuItem_Click);
             // 
             // thoátToolStripMenuItem
             // 
             this.thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
-            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.thoátToolStripMenuItem.Text = "Thoát";
+            this.thoátToolStripMenuItem.Click += new System.EventHandler(this.thoátToolStripMenuItem_Click);
             // 
             // danhMụcToolStripMenuItem
             // 
@@ -175,6 +177,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1382, 675);
             this.panel1.TabIndex = 2;
+            this.panel1.Visible = false;
             // 
             // thốngKêToolStripMenuItem
             // 
