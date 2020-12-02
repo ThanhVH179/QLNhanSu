@@ -95,7 +95,7 @@ namespace GUI_QLNhanSu
             Ftk.Dock = DockStyle.Fill;
             panel1.Controls.Add(Ftk);
             Ftk.Show();
-            //aaa
+            //bbbb
         }
     }
 }
