@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmNhanVien));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btHinh = new System.Windows.Forms.Button();
             this.pbHinh = new System.Windows.Forms.PictureBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
+            this.cmbChucVu = new System.Windows.Forms.ComboBox();
             this.cmbGT = new System.Windows.Forms.ComboBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtSDT = new System.Windows.Forms.TextBox();
+            this.txtDanToc = new System.Windows.Forms.TextBox();
+            this.txtQueQuan = new System.Windows.Forms.TextBox();
+            this.txtTen = new System.Windows.Forms.TextBox();
             this.txtMaNV = new System.Windows.Forms.TextBox();
             this.lblChucVu = new System.Windows.Forms.Label();
             this.lblSĐT = new System.Windows.Forms.Label();
@@ -57,10 +57,11 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.btXoa = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.btSua = new System.Windows.Forms.Button();
+            this.btLuu = new System.Windows.Forms.Button();
             this.btThem = new System.Windows.Forms.Button();
             this.btTimKiem = new System.Windows.Forms.Button();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
+            this.btSua = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbHinh)).BeginInit();
             this.panel2.SuspendLayout();
@@ -72,13 +73,13 @@
             // 
             this.panel1.Controls.Add(this.btHinh);
             this.panel1.Controls.Add(this.pbHinh);
-            this.panel1.Controls.Add(this.dateTimePicker1);
-            this.panel1.Controls.Add(this.comboBox2);
+            this.panel1.Controls.Add(this.dtpNgaySinh);
+            this.panel1.Controls.Add(this.cmbChucVu);
             this.panel1.Controls.Add(this.cmbGT);
-            this.panel1.Controls.Add(this.textBox5);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.txtSDT);
+            this.panel1.Controls.Add(this.txtDanToc);
+            this.panel1.Controls.Add(this.txtQueQuan);
+            this.panel1.Controls.Add(this.txtTen);
             this.panel1.Controls.Add(this.txtMaNV);
             this.panel1.Controls.Add(this.lblChucVu);
             this.panel1.Controls.Add(this.lblSĐT);
@@ -111,20 +112,20 @@
             this.pbHinh.TabIndex = 33;
             this.pbHinh.TabStop = false;
             // 
-            // dateTimePicker1
+            // dtpNgaySinh
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(92, 108);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(231, 22);
-            this.dateTimePicker1.TabIndex = 32;
+            this.dtpNgaySinh.Location = new System.Drawing.Point(92, 108);
+            this.dtpNgaySinh.Name = "dtpNgaySinh";
+            this.dtpNgaySinh.Size = new System.Drawing.Size(231, 22);
+            this.dtpNgaySinh.TabIndex = 32;
             // 
-            // comboBox2
+            // cmbChucVu
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(483, 155);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(174, 24);
-            this.comboBox2.TabIndex = 31;
+            this.cmbChucVu.FormattingEnabled = true;
+            this.cmbChucVu.Location = new System.Drawing.Point(483, 155);
+            this.cmbChucVu.Name = "cmbChucVu";
+            this.cmbChucVu.Size = new System.Drawing.Size(174, 24);
+            this.cmbChucVu.TabIndex = 31;
             // 
             // cmbGT
             // 
@@ -134,33 +135,33 @@
             this.cmbGT.Size = new System.Drawing.Size(121, 24);
             this.cmbGT.TabIndex = 30;
             // 
-            // textBox5
+            // txtSDT
             // 
-            this.textBox5.Location = new System.Drawing.Point(483, 110);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(174, 22);
-            this.textBox5.TabIndex = 29;
+            this.txtSDT.Location = new System.Drawing.Point(483, 110);
+            this.txtSDT.Name = "txtSDT";
+            this.txtSDT.Size = new System.Drawing.Size(174, 22);
+            this.txtSDT.TabIndex = 29;
             // 
-            // textBox4
+            // txtDanToc
             // 
-            this.textBox4.Location = new System.Drawing.Point(483, 62);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(174, 22);
-            this.textBox4.TabIndex = 28;
+            this.txtDanToc.Location = new System.Drawing.Point(483, 62);
+            this.txtDanToc.Name = "txtDanToc";
+            this.txtDanToc.Size = new System.Drawing.Size(174, 22);
+            this.txtDanToc.TabIndex = 28;
             // 
-            // textBox3
+            // txtQueQuan
             // 
-            this.textBox3.Location = new System.Drawing.Point(92, 155);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(174, 22);
-            this.textBox3.TabIndex = 27;
+            this.txtQueQuan.Location = new System.Drawing.Point(92, 155);
+            this.txtQueQuan.Name = "txtQueQuan";
+            this.txtQueQuan.Size = new System.Drawing.Size(174, 22);
+            this.txtQueQuan.TabIndex = 27;
             // 
-            // textBox2
+            // txtTen
             // 
-            this.textBox2.Location = new System.Drawing.Point(92, 62);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(174, 22);
-            this.textBox2.TabIndex = 26;
+            this.txtTen.Location = new System.Drawing.Point(92, 62);
+            this.txtTen.Name = "txtTen";
+            this.txtTen.Size = new System.Drawing.Size(174, 22);
+            this.txtTen.TabIndex = 26;
             // 
             // txtMaNV
             // 
@@ -259,34 +260,34 @@
             // 
             // dgvNhanVien
             // 
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle25.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle25.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvNhanVien.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvNhanVien.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle26.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvNhanVien.DefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvNhanVien.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvNhanVien.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvNhanVien.Location = new System.Drawing.Point(0, 0);
             this.dgvNhanVien.Name = "dgvNhanVien";
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle27.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle27.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvNhanVien.RowHeadersDefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvNhanVien.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvNhanVien.RowHeadersWidth = 51;
             this.dgvNhanVien.RowTemplate.Height = 24;
             this.dgvNhanVien.Size = new System.Drawing.Size(1382, 340);
@@ -296,6 +297,7 @@
             // 
             this.panel3.Controls.Add(this.btXoa);
             this.panel3.Controls.Add(this.btSua);
+            this.panel3.Controls.Add(this.btLuu);
             this.panel3.Controls.Add(this.btThem);
             this.panel3.Controls.Add(this.btTimKiem);
             this.panel3.Controls.Add(this.txtTimKiem);
@@ -308,9 +310,9 @@
             // btXoa
             // 
             this.btXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btXoa.ImageIndex = 2;
+            this.btXoa.ImageIndex = 3;
             this.btXoa.ImageList = this.imageList1;
-            this.btXoa.Location = new System.Drawing.Point(808, 9);
+            this.btXoa.Location = new System.Drawing.Point(854, 9);
             this.btXoa.Name = "btXoa";
             this.btXoa.Size = new System.Drawing.Size(100, 40);
             this.btXoa.TabIndex = 34;
@@ -323,29 +325,30 @@
             this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             this.imageList1.Images.SetKeyName(0, "add-icon.png");
-            this.imageList1.Images.SetKeyName(1, "edit.png");
-            this.imageList1.Images.SetKeyName(2, "Actions-edit-delete-icon.png");
-            this.imageList1.Images.SetKeyName(3, "find.png");
+            this.imageList1.Images.SetKeyName(1, "Save-icon.png");
+            this.imageList1.Images.SetKeyName(2, "edit.png");
+            this.imageList1.Images.SetKeyName(3, "Actions-edit-delete-icon.png");
+            this.imageList1.Images.SetKeyName(4, "find.png");
             // 
-            // btSua
+            // btLuu
             // 
-            this.btSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btSua.ImageIndex = 1;
-            this.btSua.ImageList = this.imageList1;
-            this.btSua.Location = new System.Drawing.Point(678, 9);
-            this.btSua.Name = "btSua";
-            this.btSua.Size = new System.Drawing.Size(100, 40);
-            this.btSua.TabIndex = 33;
-            this.btSua.Text = "Sửa";
-            this.btSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btSua.UseVisualStyleBackColor = true;
+            this.btLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btLuu.ImageIndex = 1;
+            this.btLuu.ImageList = this.imageList1;
+            this.btLuu.Location = new System.Drawing.Point(608, 9);
+            this.btLuu.Name = "btLuu";
+            this.btLuu.Size = new System.Drawing.Size(100, 40);
+            this.btLuu.TabIndex = 33;
+            this.btLuu.Text = "Lưu";
+            this.btLuu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btLuu.UseVisualStyleBackColor = true;
             // 
             // btThem
             // 
             this.btThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btThem.ImageIndex = 0;
             this.btThem.ImageList = this.imageList1;
-            this.btThem.Location = new System.Drawing.Point(545, 9);
+            this.btThem.Location = new System.Drawing.Point(483, 9);
             this.btThem.Name = "btThem";
             this.btThem.Size = new System.Drawing.Size(100, 40);
             this.btThem.TabIndex = 32;
@@ -356,9 +359,9 @@
             // btTimKiem
             // 
             this.btTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btTimKiem.ImageIndex = 3;
+            this.btTimKiem.ImageIndex = 4;
             this.btTimKiem.ImageList = this.imageList1;
-            this.btTimKiem.Location = new System.Drawing.Point(84, 9);
+            this.btTimKiem.Location = new System.Drawing.Point(57, 9);
             this.btTimKiem.Name = "btTimKiem";
             this.btTimKiem.Size = new System.Drawing.Size(120, 40);
             this.btTimKiem.TabIndex = 31;
@@ -368,11 +371,24 @@
             // 
             // txtTimKiem
             // 
-            this.txtTimKiem.Location = new System.Drawing.Point(212, 18);
+            this.txtTimKiem.Location = new System.Drawing.Point(183, 18);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(250, 22);
             this.txtTimKiem.TabIndex = 30;
             this.txtTimKiem.Text = ".";
+            // 
+            // btSua
+            // 
+            this.btSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btSua.ImageIndex = 2;
+            this.btSua.ImageList = this.imageList1;
+            this.btSua.Location = new System.Drawing.Point(731, 9);
+            this.btSua.Name = "btSua";
+            this.btSua.Size = new System.Drawing.Size(100, 40);
+            this.btSua.TabIndex = 33;
+            this.btSua.Text = "Sửa";
+            this.btSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btSua.UseVisualStyleBackColor = true;
             // 
             // FrmNhanVien
             // 
@@ -401,13 +417,13 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pbHinh;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.DateTimePicker dtpNgaySinh;
+        private System.Windows.Forms.ComboBox cmbChucVu;
         private System.Windows.Forms.ComboBox cmbGT;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtSDT;
+        private System.Windows.Forms.TextBox txtDanToc;
+        private System.Windows.Forms.TextBox txtQueQuan;
+        private System.Windows.Forms.TextBox txtTen;
         private System.Windows.Forms.TextBox txtMaNV;
         private System.Windows.Forms.Label lblChucVu;
         private System.Windows.Forms.Label lblSĐT;
@@ -421,11 +437,12 @@
         private System.Windows.Forms.DataGridView dgvNhanVien;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btXoa;
-        private System.Windows.Forms.Button btSua;
+        private System.Windows.Forms.Button btLuu;
         private System.Windows.Forms.Button btThem;
         private System.Windows.Forms.Button btTimKiem;
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Button btHinh;
+        private System.Windows.Forms.Button btSua;
     }
 }

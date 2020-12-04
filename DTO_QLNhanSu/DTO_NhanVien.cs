@@ -23,25 +23,7 @@ namespace DTO_QLNhanSu
         public string chucVu;
         public string trinhDoHV;
         public string bacLuong;
-        public DTO_NhanVien(string manv, string hoten, string email, DateTime ngaysinh, string quequan, int gioitinh, string dantoc,
-                            string sdt, int vaitro, string hinh, string matkhau, string maPB, string chucvu, string trinhdoHV, string bacluong) 
-        {
-            this.maNV = manv;
-            this.hoTen = hoten;
-            this.email = email;
-            this.ngaySinh = ngaysinh;
-            this.queQuan = quequan;
-            this.gioiTinh = gioitinh;
-            this.danToc = dantoc;
-            this.sDT = sdt;
-            this.vaiTro = vaitro;
-            this.hinh = hinh;
-            this.matKhau = matkhau;
-            this.maPB = maPB;
-            this.chucVu = chucvu;
-            this.trinhDoHV = trinhdoHV;
-            this.bacLuong = bacluong;
-        }
+        
         public string MaNV
         {
             get { return maNV; }
@@ -118,5 +100,24 @@ namespace DTO_QLNhanSu
             set { bacLuong = value; }
         }
 
+        public DTO_NhanVien(string manv, string hoten, string email, DateTime ngaysinh, string quequan, int gioitinh, string dantoc,
+                            string sdt, int vaitro, string hinh, string matkhau, string maPB, string chucvu, string trinhdoHV, string bacluong)
+        {
+            this.maNV = manv;
+            this.hoTen = hoten;
+            this.email = email;
+            this.ngaySinh = ngaysinh;
+            this.queQuan = quequan;
+            this.gioiTinh = gioitinh;
+            this.danToc = dantoc;
+            this.sDT = sdt;
+            this.vaiTro = vaitro;
+            this.hinh = hinh;
+            this.matKhau = matkhau;
+            this.maPB = maPB;
+            this.chucVu = chucvu;
+            this.trinhDoHV = trinhdoHV;
+            this.bacLuong = bacluong;
+        }
     }
 }

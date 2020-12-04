@@ -33,7 +33,7 @@
             this.lblTimkiem = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cbbLoaiSC = new System.Windows.Forms.ComboBox();
+            this.cmbLoaiSC = new System.Windows.Forms.ComboBox();
             this.txtMaNV = new System.Windows.Forms.TextBox();
             this.txtTenSC = new System.Windows.Forms.TextBox();
             this.txtThiethai = new System.Windows.Forms.TextBox();
@@ -47,10 +47,11 @@
             this.dgvSuco = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btXoa = new System.Windows.Forms.Button();
-            this.btSua = new System.Windows.Forms.Button();
+            this.btLuu = new System.Windows.Forms.Button();
             this.btThem = new System.Windows.Forms.Button();
             this.btTimKiem = new System.Windows.Forms.Button();
             this.txtTimkiem = new System.Windows.Forms.TextBox();
+            this.btSua = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSuco)).BeginInit();
@@ -70,13 +71,14 @@
             this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             this.imageList1.Images.SetKeyName(0, "add-icon.png");
-            this.imageList1.Images.SetKeyName(1, "edit.png");
-            this.imageList1.Images.SetKeyName(2, "Actions-edit-delete-icon.png");
-            this.imageList1.Images.SetKeyName(3, "find.png");
+            this.imageList1.Images.SetKeyName(1, "Save-icon.png");
+            this.imageList1.Images.SetKeyName(2, "edit.png");
+            this.imageList1.Images.SetKeyName(3, "Actions-edit-delete-icon.png");
+            this.imageList1.Images.SetKeyName(4, "find.png");
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.cbbLoaiSC);
+            this.panel1.Controls.Add(this.cmbLoaiSC);
             this.panel1.Controls.Add(this.txtMaNV);
             this.panel1.Controls.Add(this.txtTenSC);
             this.panel1.Controls.Add(this.txtThiethai);
@@ -92,13 +94,13 @@
             this.panel1.Size = new System.Drawing.Size(1382, 184);
             this.panel1.TabIndex = 32;
             // 
-            // cbbLoaiSC
+            // cmbLoaiSC
             // 
-            this.cbbLoaiSC.FormattingEnabled = true;
-            this.cbbLoaiSC.Location = new System.Drawing.Point(815, 80);
-            this.cbbLoaiSC.Name = "cbbLoaiSC";
-            this.cbbLoaiSC.Size = new System.Drawing.Size(195, 24);
-            this.cbbLoaiSC.TabIndex = 21;
+            this.cmbLoaiSC.FormattingEnabled = true;
+            this.cmbLoaiSC.Location = new System.Drawing.Point(815, 80);
+            this.cmbLoaiSC.Name = "cmbLoaiSC";
+            this.cmbLoaiSC.Size = new System.Drawing.Size(195, 24);
+            this.cmbLoaiSC.TabIndex = 21;
             // 
             // txtMaNV
             // 
@@ -202,6 +204,7 @@
             // 
             this.panel3.Controls.Add(this.btXoa);
             this.panel3.Controls.Add(this.btSua);
+            this.panel3.Controls.Add(this.btLuu);
             this.panel3.Controls.Add(this.btThem);
             this.panel3.Controls.Add(this.btTimKiem);
             this.panel3.Controls.Add(this.txtTimkiem);
@@ -214,9 +217,9 @@
             // btXoa
             // 
             this.btXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btXoa.ImageIndex = 2;
+            this.btXoa.ImageIndex = 3;
             this.btXoa.ImageList = this.imageList1;
-            this.btXoa.Location = new System.Drawing.Point(968, 27);
+            this.btXoa.Location = new System.Drawing.Point(1107, 27);
             this.btXoa.Name = "btXoa";
             this.btXoa.Size = new System.Drawing.Size(100, 40);
             this.btXoa.TabIndex = 44;
@@ -224,18 +227,18 @@
             this.btXoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btXoa.UseVisualStyleBackColor = true;
             // 
-            // btSua
+            // btLuu
             // 
-            this.btSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btSua.ImageIndex = 1;
-            this.btSua.ImageList = this.imageList1;
-            this.btSua.Location = new System.Drawing.Point(862, 27);
-            this.btSua.Name = "btSua";
-            this.btSua.Size = new System.Drawing.Size(100, 40);
-            this.btSua.TabIndex = 43;
-            this.btSua.Text = "Sửa";
-            this.btSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btSua.UseVisualStyleBackColor = true;
+            this.btLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btLuu.ImageIndex = 1;
+            this.btLuu.ImageList = this.imageList1;
+            this.btLuu.Location = new System.Drawing.Point(871, 27);
+            this.btLuu.Name = "btLuu";
+            this.btLuu.Size = new System.Drawing.Size(100, 40);
+            this.btLuu.TabIndex = 43;
+            this.btLuu.Text = "Lưu";
+            this.btLuu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btLuu.UseVisualStyleBackColor = true;
             // 
             // btThem
             // 
@@ -253,7 +256,7 @@
             // btTimKiem
             // 
             this.btTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btTimKiem.ImageIndex = 3;
+            this.btTimKiem.ImageIndex = 4;
             this.btTimKiem.ImageList = this.imageList1;
             this.btTimKiem.Location = new System.Drawing.Point(315, 27);
             this.btTimKiem.Name = "btTimKiem";
@@ -269,6 +272,19 @@
             this.txtTimkiem.Name = "txtTimkiem";
             this.txtTimkiem.Size = new System.Drawing.Size(250, 22);
             this.txtTimkiem.TabIndex = 40;
+            // 
+            // btSua
+            // 
+            this.btSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btSua.ImageIndex = 2;
+            this.btSua.ImageList = this.imageList1;
+            this.btSua.Location = new System.Drawing.Point(990, 27);
+            this.btSua.Name = "btSua";
+            this.btSua.Size = new System.Drawing.Size(100, 40);
+            this.btSua.TabIndex = 43;
+            this.btSua.Text = "Sửa";
+            this.btSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btSua.UseVisualStyleBackColor = true;
             // 
             // FrmSuCo
             // 
@@ -297,7 +313,7 @@
         private System.Windows.Forms.Label lblTimkiem;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox cbbLoaiSC;
+        private System.Windows.Forms.ComboBox cmbLoaiSC;
         private System.Windows.Forms.TextBox txtMaNV;
         private System.Windows.Forms.TextBox txtTenSC;
         private System.Windows.Forms.TextBox txtThiethai;
@@ -311,9 +327,10 @@
         private System.Windows.Forms.DataGridView dgvSuco;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btXoa;
-        private System.Windows.Forms.Button btSua;
+        private System.Windows.Forms.Button btLuu;
         private System.Windows.Forms.Button btThem;
         private System.Windows.Forms.Button btTimKiem;
         private System.Windows.Forms.TextBox txtTimkiem;
+        private System.Windows.Forms.Button btSua;
     }
 }

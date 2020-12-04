@@ -32,24 +32,25 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmKTKL));
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtMota = new System.Windows.Forms.TextBox();
+            this.txtMoTa = new System.Windows.Forms.TextBox();
             this.lblMota = new System.Windows.Forms.Label();
-            this.cbbLoai = new System.Windows.Forms.ComboBox();
+            this.cmbLoai = new System.Windows.Forms.ComboBox();
             this.lblLoai = new System.Windows.Forms.Label();
             this.txtMaNV = new System.Windows.Forms.TextBox();
             this.lblMaNV = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.btXoa = new System.Windows.Forms.Button();
             this.btSua = new System.Windows.Forms.Button();
             this.btThem = new System.Windows.Forms.Button();
             this.btTimKiem = new System.Windows.Forms.Button();
             this.txtTimkiem = new System.Windows.Forms.TextBox();
+            this.btLuu = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // imageList1
@@ -57,15 +58,16 @@
             this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             this.imageList1.Images.SetKeyName(0, "add-icon.png");
-            this.imageList1.Images.SetKeyName(1, "edit.png");
-            this.imageList1.Images.SetKeyName(2, "Actions-edit-delete-icon.png");
-            this.imageList1.Images.SetKeyName(3, "find.png");
+            this.imageList1.Images.SetKeyName(1, "Save-icon.png");
+            this.imageList1.Images.SetKeyName(2, "edit.png");
+            this.imageList1.Images.SetKeyName(3, "Actions-edit-delete-icon.png");
+            this.imageList1.Images.SetKeyName(4, "find.png");
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.txtMota);
+            this.panel1.Controls.Add(this.txtMoTa);
             this.panel1.Controls.Add(this.lblMota);
-            this.panel1.Controls.Add(this.cbbLoai);
+            this.panel1.Controls.Add(this.cmbLoai);
             this.panel1.Controls.Add(this.lblLoai);
             this.panel1.Controls.Add(this.txtMaNV);
             this.panel1.Controls.Add(this.lblMaNV);
@@ -75,13 +77,13 @@
             this.panel1.Size = new System.Drawing.Size(1382, 165);
             this.panel1.TabIndex = 32;
             // 
-            // txtMota
+            // txtMoTa
             // 
-            this.txtMota.Location = new System.Drawing.Point(422, 74);
-            this.txtMota.Multiline = true;
-            this.txtMota.Name = "txtMota";
-            this.txtMota.Size = new System.Drawing.Size(250, 60);
-            this.txtMota.TabIndex = 20;
+            this.txtMoTa.Location = new System.Drawing.Point(422, 74);
+            this.txtMoTa.Multiline = true;
+            this.txtMoTa.Name = "txtMoTa";
+            this.txtMoTa.Size = new System.Drawing.Size(250, 60);
+            this.txtMoTa.TabIndex = 20;
             // 
             // lblMota
             // 
@@ -93,13 +95,13 @@
             this.lblMota.TabIndex = 19;
             this.lblMota.Text = "Mô tả:";
             // 
-            // cbbLoai
+            // cmbLoai
             // 
-            this.cbbLoai.FormattingEnabled = true;
-            this.cbbLoai.Location = new System.Drawing.Point(778, 21);
-            this.cbbLoai.Name = "cbbLoai";
-            this.cbbLoai.Size = new System.Drawing.Size(180, 24);
-            this.cbbLoai.TabIndex = 18;
+            this.cmbLoai.FormattingEnabled = true;
+            this.cmbLoai.Location = new System.Drawing.Point(778, 21);
+            this.cmbLoai.Name = "cmbLoai";
+            this.cmbLoai.Size = new System.Drawing.Size(180, 24);
+            this.cmbLoai.TabIndex = 18;
             // 
             // lblLoai
             // 
@@ -137,19 +139,6 @@
             this.panel2.Size = new System.Drawing.Size(1382, 348);
             this.panel2.TabIndex = 33;
             // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.btXoa);
-            this.panel3.Controls.Add(this.btSua);
-            this.panel3.Controls.Add(this.btThem);
-            this.panel3.Controls.Add(this.btTimKiem);
-            this.panel3.Controls.Add(this.txtTimkiem);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 513);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1382, 154);
-            this.panel3.TabIndex = 34;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -161,12 +150,26 @@
             this.dataGridView1.Size = new System.Drawing.Size(1382, 348);
             this.dataGridView1.TabIndex = 17;
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.btXoa);
+            this.panel3.Controls.Add(this.btSua);
+            this.panel3.Controls.Add(this.btLuu);
+            this.panel3.Controls.Add(this.btThem);
+            this.panel3.Controls.Add(this.btTimKiem);
+            this.panel3.Controls.Add(this.txtTimkiem);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 513);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1382, 154);
+            this.panel3.TabIndex = 34;
+            // 
             // btXoa
             // 
             this.btXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btXoa.ImageIndex = 2;
+            this.btXoa.ImageIndex = 3;
             this.btXoa.ImageList = this.imageList1;
-            this.btXoa.Location = new System.Drawing.Point(939, 35);
+            this.btXoa.Location = new System.Drawing.Point(1061, 35);
             this.btXoa.Name = "btXoa";
             this.btXoa.Size = new System.Drawing.Size(100, 40);
             this.btXoa.TabIndex = 41;
@@ -177,9 +180,9 @@
             // btSua
             // 
             this.btSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btSua.ImageIndex = 1;
+            this.btSua.ImageIndex = 2;
             this.btSua.ImageList = this.imageList1;
-            this.btSua.Location = new System.Drawing.Point(816, 35);
+            this.btSua.Location = new System.Drawing.Point(941, 35);
             this.btSua.Name = "btSua";
             this.btSua.Size = new System.Drawing.Size(100, 40);
             this.btSua.TabIndex = 40;
@@ -203,7 +206,7 @@
             // btTimKiem
             // 
             this.btTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btTimKiem.ImageIndex = 3;
+            this.btTimKiem.ImageIndex = 4;
             this.btTimKiem.ImageList = this.imageList1;
             this.btTimKiem.Location = new System.Drawing.Point(274, 35);
             this.btTimKiem.Name = "btTimKiem";
@@ -220,6 +223,19 @@
             this.txtTimkiem.Size = new System.Drawing.Size(250, 22);
             this.txtTimkiem.TabIndex = 37;
             // 
+            // btLuu
+            // 
+            this.btLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btLuu.ImageIndex = 1;
+            this.btLuu.ImageList = this.imageList1;
+            this.btLuu.Location = new System.Drawing.Point(816, 35);
+            this.btLuu.Name = "btLuu";
+            this.btLuu.Size = new System.Drawing.Size(100, 40);
+            this.btLuu.TabIndex = 39;
+            this.btLuu.Text = "Lưu";
+            this.btLuu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btLuu.UseVisualStyleBackColor = true;
+            // 
             // FrmKTKL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -234,9 +250,9 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -244,9 +260,9 @@
         #endregion
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox txtMota;
+        private System.Windows.Forms.TextBox txtMoTa;
         private System.Windows.Forms.Label lblMota;
-        private System.Windows.Forms.ComboBox cbbLoai;
+        private System.Windows.Forms.ComboBox cmbLoai;
         private System.Windows.Forms.Label lblLoai;
         private System.Windows.Forms.TextBox txtMaNV;
         private System.Windows.Forms.Label lblMaNV;
@@ -258,5 +274,6 @@
         private System.Windows.Forms.Button btThem;
         private System.Windows.Forms.Button btTimKiem;
         private System.Windows.Forms.TextBox txtTimkiem;
+        private System.Windows.Forms.Button btLuu;
     }
 }

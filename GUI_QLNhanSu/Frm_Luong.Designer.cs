@@ -32,10 +32,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLuong));
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtHesoluong = new System.Windows.Forms.TextBox();
-            this.txtHesophucap = new System.Windows.Forms.TextBox();
-            this.txtLuongcoban = new System.Windows.Forms.TextBox();
-            this.txtBacluong = new System.Windows.Forms.TextBox();
+            this.txtHeSoLuong = new System.Windows.Forms.TextBox();
+            this.txtHeSoPhuCap = new System.Windows.Forms.TextBox();
+            this.txtLuongCoBan = new System.Windows.Forms.TextBox();
+            this.txtBacLuong = new System.Windows.Forms.TextBox();
             this.lblHesophucap = new System.Windows.Forms.Label();
             this.lblHesoluong = new System.Windows.Forms.Label();
             this.lblLuongcoban = new System.Windows.Forms.Label();
@@ -44,10 +44,11 @@
             this.dgvLuong = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btXoa = new System.Windows.Forms.Button();
-            this.btSua = new System.Windows.Forms.Button();
+            this.btLuu = new System.Windows.Forms.Button();
             this.btTimKiem = new System.Windows.Forms.Button();
             this.btThem = new System.Windows.Forms.Button();
             this.txtTimkiem = new System.Windows.Forms.TextBox();
+            this.btSua = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLuong)).BeginInit();
@@ -59,16 +60,17 @@
             this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             this.imageList1.Images.SetKeyName(0, "add-icon.png");
-            this.imageList1.Images.SetKeyName(1, "edit.png");
-            this.imageList1.Images.SetKeyName(2, "Actions-edit-delete-icon.png");
-            this.imageList1.Images.SetKeyName(3, "find.png");
+            this.imageList1.Images.SetKeyName(1, "Save-icon.png");
+            this.imageList1.Images.SetKeyName(2, "edit.png");
+            this.imageList1.Images.SetKeyName(3, "Actions-edit-delete-icon.png");
+            this.imageList1.Images.SetKeyName(4, "find.png");
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.txtHesoluong);
-            this.panel1.Controls.Add(this.txtHesophucap);
-            this.panel1.Controls.Add(this.txtLuongcoban);
-            this.panel1.Controls.Add(this.txtBacluong);
+            this.panel1.Controls.Add(this.txtHeSoLuong);
+            this.panel1.Controls.Add(this.txtHeSoPhuCap);
+            this.panel1.Controls.Add(this.txtLuongCoBan);
+            this.panel1.Controls.Add(this.txtBacLuong);
             this.panel1.Controls.Add(this.lblHesophucap);
             this.panel1.Controls.Add(this.lblHesoluong);
             this.panel1.Controls.Add(this.lblLuongcoban);
@@ -79,33 +81,33 @@
             this.panel1.Size = new System.Drawing.Size(1182, 158);
             this.panel1.TabIndex = 30;
             // 
-            // txtHesoluong
+            // txtHeSoLuong
             // 
-            this.txtHesoluong.Location = new System.Drawing.Point(691, 45);
-            this.txtHesoluong.Name = "txtHesoluong";
-            this.txtHesoluong.Size = new System.Drawing.Size(216, 22);
-            this.txtHesoluong.TabIndex = 15;
+            this.txtHeSoLuong.Location = new System.Drawing.Point(691, 45);
+            this.txtHeSoLuong.Name = "txtHeSoLuong";
+            this.txtHeSoLuong.Size = new System.Drawing.Size(216, 22);
+            this.txtHeSoLuong.TabIndex = 15;
             // 
-            // txtHesophucap
+            // txtHeSoPhuCap
             // 
-            this.txtHesophucap.Location = new System.Drawing.Point(691, 91);
-            this.txtHesophucap.Name = "txtHesophucap";
-            this.txtHesophucap.Size = new System.Drawing.Size(216, 22);
-            this.txtHesophucap.TabIndex = 14;
+            this.txtHeSoPhuCap.Location = new System.Drawing.Point(691, 91);
+            this.txtHeSoPhuCap.Name = "txtHeSoPhuCap";
+            this.txtHeSoPhuCap.Size = new System.Drawing.Size(216, 22);
+            this.txtHeSoPhuCap.TabIndex = 14;
             // 
-            // txtLuongcoban
+            // txtLuongCoBan
             // 
-            this.txtLuongcoban.Location = new System.Drawing.Point(312, 92);
-            this.txtLuongcoban.Name = "txtLuongcoban";
-            this.txtLuongcoban.Size = new System.Drawing.Size(216, 22);
-            this.txtLuongcoban.TabIndex = 13;
+            this.txtLuongCoBan.Location = new System.Drawing.Point(312, 92);
+            this.txtLuongCoBan.Name = "txtLuongCoBan";
+            this.txtLuongCoBan.Size = new System.Drawing.Size(216, 22);
+            this.txtLuongCoBan.TabIndex = 13;
             // 
-            // txtBacluong
+            // txtBacLuong
             // 
-            this.txtBacluong.Location = new System.Drawing.Point(312, 45);
-            this.txtBacluong.Name = "txtBacluong";
-            this.txtBacluong.Size = new System.Drawing.Size(216, 22);
-            this.txtBacluong.TabIndex = 12;
+            this.txtBacLuong.Location = new System.Drawing.Point(312, 45);
+            this.txtBacLuong.Name = "txtBacLuong";
+            this.txtBacLuong.Size = new System.Drawing.Size(216, 22);
+            this.txtBacLuong.TabIndex = 12;
             // 
             // lblHesophucap
             // 
@@ -171,6 +173,7 @@
             // 
             this.panel3.Controls.Add(this.btXoa);
             this.panel3.Controls.Add(this.btSua);
+            this.panel3.Controls.Add(this.btLuu);
             this.panel3.Controls.Add(this.btTimKiem);
             this.panel3.Controls.Add(this.btThem);
             this.panel3.Controls.Add(this.txtTimkiem);
@@ -183,9 +186,9 @@
             // btXoa
             // 
             this.btXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btXoa.ImageIndex = 2;
+            this.btXoa.ImageIndex = 3;
             this.btXoa.ImageList = this.imageList1;
-            this.btXoa.Location = new System.Drawing.Point(884, 36);
+            this.btXoa.Location = new System.Drawing.Point(1023, 36);
             this.btXoa.Name = "btXoa";
             this.btXoa.Size = new System.Drawing.Size(100, 40);
             this.btXoa.TabIndex = 34;
@@ -193,23 +196,23 @@
             this.btXoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btXoa.UseVisualStyleBackColor = true;
             // 
-            // btSua
+            // btLuu
             // 
-            this.btSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btSua.ImageIndex = 1;
-            this.btSua.ImageList = this.imageList1;
-            this.btSua.Location = new System.Drawing.Point(768, 36);
-            this.btSua.Name = "btSua";
-            this.btSua.Size = new System.Drawing.Size(100, 40);
-            this.btSua.TabIndex = 33;
-            this.btSua.Text = "Sửa";
-            this.btSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btSua.UseVisualStyleBackColor = true;
+            this.btLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btLuu.ImageIndex = 1;
+            this.btLuu.ImageList = this.imageList1;
+            this.btLuu.Location = new System.Drawing.Point(772, 36);
+            this.btLuu.Name = "btLuu";
+            this.btLuu.Size = new System.Drawing.Size(100, 40);
+            this.btLuu.TabIndex = 33;
+            this.btLuu.Text = "Lưu";
+            this.btLuu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btLuu.UseVisualStyleBackColor = true;
             // 
             // btTimKiem
             // 
             this.btTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btTimKiem.ImageIndex = 3;
+            this.btTimKiem.ImageIndex = 4;
             this.btTimKiem.ImageList = this.imageList1;
             this.btTimKiem.Location = new System.Drawing.Point(199, 36);
             this.btTimKiem.Name = "btTimKiem";
@@ -239,6 +242,19 @@
             this.txtTimkiem.Size = new System.Drawing.Size(250, 22);
             this.txtTimkiem.TabIndex = 30;
             // 
+            // btSua
+            // 
+            this.btSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btSua.ImageIndex = 2;
+            this.btSua.ImageList = this.imageList1;
+            this.btSua.Location = new System.Drawing.Point(897, 36);
+            this.btSua.Name = "btSua";
+            this.btSua.Size = new System.Drawing.Size(100, 40);
+            this.btSua.TabIndex = 33;
+            this.btSua.Text = "Sửa";
+            this.btSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btSua.UseVisualStyleBackColor = true;
+            // 
             // FrmLuong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -263,10 +279,10 @@
         #endregion
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox txtHesoluong;
-        private System.Windows.Forms.TextBox txtHesophucap;
-        private System.Windows.Forms.TextBox txtLuongcoban;
-        private System.Windows.Forms.TextBox txtBacluong;
+        private System.Windows.Forms.TextBox txtHeSoLuong;
+        private System.Windows.Forms.TextBox txtHeSoPhuCap;
+        private System.Windows.Forms.TextBox txtLuongCoBan;
+        private System.Windows.Forms.TextBox txtBacLuong;
         private System.Windows.Forms.Label lblHesophucap;
         private System.Windows.Forms.Label lblHesoluong;
         private System.Windows.Forms.Label lblLuongcoban;
@@ -275,9 +291,10 @@
         private System.Windows.Forms.DataGridView dgvLuong;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btXoa;
-        private System.Windows.Forms.Button btSua;
+        private System.Windows.Forms.Button btLuu;
         private System.Windows.Forms.Button btTimKiem;
         private System.Windows.Forms.Button btThem;
         private System.Windows.Forms.TextBox txtTimkiem;
+        private System.Windows.Forms.Button btSua;
     }
 }

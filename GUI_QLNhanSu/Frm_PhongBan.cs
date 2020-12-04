@@ -26,5 +26,10 @@ namespace GUI_QLNhanSu
         {
 
         }
+
+        private void btLuu_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
