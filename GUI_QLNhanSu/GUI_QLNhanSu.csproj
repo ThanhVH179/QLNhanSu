@@ -168,5 +168,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BUS_QLNhanSu\BUS_QLNhanSu.csproj">
+      <Project>{ecf313d7-759e-43af-8d4d-23dc1d32a2f6}</Project>
+      <Name>BUS_QLNhanSu</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO_QLNhanSu\DTO_QLNhanSu.csproj">
+      <Project>{b6606b28-e6aa-41f8-a0b2-11f2d3929424}</Project>
+      <Name>DTO_QLNhanSu</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -70,19 +70,17 @@
             // 
             // txtTaiKhoan
             // 
-            this.txtTaiKhoan.Location = new System.Drawing.Point(159, 101);
-            this.txtTaiKhoan.Multiline = true;
+            this.txtTaiKhoan.Location = new System.Drawing.Point(128, 100);
             this.txtTaiKhoan.Name = "txtTaiKhoan";
-            this.txtTaiKhoan.Size = new System.Drawing.Size(195, 28);
+            this.txtTaiKhoan.Size = new System.Drawing.Size(250, 22);
             this.txtTaiKhoan.TabIndex = 3;
             // 
             // txtMatKhau
             // 
-            this.txtMatKhau.Location = new System.Drawing.Point(159, 152);
-            this.txtMatKhau.Multiline = true;
+            this.txtMatKhau.Location = new System.Drawing.Point(128, 152);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.PasswordChar = '*';
-            this.txtMatKhau.Size = new System.Drawing.Size(195, 28);
+            this.txtMatKhau.Size = new System.Drawing.Size(250, 22);
             this.txtMatKhau.TabIndex = 4;
             // 
             // btDangNhap
@@ -96,6 +94,7 @@
             this.btDangNhap.TabIndex = 5;
             this.btDangNhap.Text = "Đăng nhập";
             this.btDangNhap.UseVisualStyleBackColor = false;
+            this.btDangNhap.Click += new System.EventHandler(this.btDangNhap_Click);
             // 
             // btQuenMatKhau
             // 
@@ -110,6 +109,7 @@
             // 
             // FrmDangNhap
             // 
+            this.AcceptButton = this.btDangNhap;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(422, 353);

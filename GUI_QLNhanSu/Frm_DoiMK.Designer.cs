@@ -36,13 +36,15 @@
             this.txtMKCu = new System.Windows.Forms.TextBox();
             this.txtMKMoi = new System.Windows.Forms.TextBox();
             this.txtNhapLaiMK = new System.Windows.Forms.TextBox();
+            this.lblTaiKhoan = new System.Windows.Forms.Label();
+            this.txtTaiKhoan = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblMKCu
             // 
             this.lblMKCu.AutoSize = true;
             this.lblMKCu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMKCu.Location = new System.Drawing.Point(50, 75);
+            this.lblMKCu.Location = new System.Drawing.Point(25, 75);
             this.lblMKCu.Name = "lblMKCu";
             this.lblMKCu.Size = new System.Drawing.Size(89, 18);
             this.lblMKCu.TabIndex = 0;
@@ -52,7 +54,7 @@
             // 
             this.lblMKMoi.AutoSize = true;
             this.lblMKMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMKMoi.Location = new System.Drawing.Point(50, 123);
+            this.lblMKMoi.Location = new System.Drawing.Point(25, 123);
             this.lblMKMoi.Name = "lblMKMoi";
             this.lblMKMoi.Size = new System.Drawing.Size(98, 18);
             this.lblMKMoi.TabIndex = 0;
@@ -62,7 +64,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(50, 174);
+            this.label2.Location = new System.Drawing.Point(22, 174);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(126, 18);
             this.label2.TabIndex = 0;
@@ -88,24 +90,41 @@
             // 
             // txtMKCu
             // 
-            this.txtMKCu.Location = new System.Drawing.Point(200, 75);
+            this.txtMKCu.Location = new System.Drawing.Point(174, 75);
             this.txtMKCu.Name = "txtMKCu";
-            this.txtMKCu.Size = new System.Drawing.Size(180, 22);
+            this.txtMKCu.Size = new System.Drawing.Size(220, 22);
             this.txtMKCu.TabIndex = 2;
             // 
             // txtMKMoi
             // 
-            this.txtMKMoi.Location = new System.Drawing.Point(200, 119);
+            this.txtMKMoi.Location = new System.Drawing.Point(174, 122);
             this.txtMKMoi.Name = "txtMKMoi";
-            this.txtMKMoi.Size = new System.Drawing.Size(180, 22);
+            this.txtMKMoi.Size = new System.Drawing.Size(220, 22);
             this.txtMKMoi.TabIndex = 2;
             // 
             // txtNhapLaiMK
             // 
-            this.txtNhapLaiMK.Location = new System.Drawing.Point(200, 170);
+            this.txtNhapLaiMK.Location = new System.Drawing.Point(174, 173);
             this.txtNhapLaiMK.Name = "txtNhapLaiMK";
-            this.txtNhapLaiMK.Size = new System.Drawing.Size(180, 22);
+            this.txtNhapLaiMK.Size = new System.Drawing.Size(220, 22);
             this.txtNhapLaiMK.TabIndex = 2;
+            // 
+            // lblTaiKhoan
+            // 
+            this.lblTaiKhoan.AutoSize = true;
+            this.lblTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTaiKhoan.Location = new System.Drawing.Point(25, 34);
+            this.lblTaiKhoan.Name = "lblTaiKhoan";
+            this.lblTaiKhoan.Size = new System.Drawing.Size(73, 18);
+            this.lblTaiKhoan.TabIndex = 0;
+            this.lblTaiKhoan.Text = "Tài khoản";
+            // 
+            // txtTaiKhoan
+            // 
+            this.txtTaiKhoan.Location = new System.Drawing.Point(174, 33);
+            this.txtTaiKhoan.Name = "txtTaiKhoan";
+            this.txtTaiKhoan.Size = new System.Drawing.Size(220, 22);
+            this.txtTaiKhoan.TabIndex = 2;
             // 
             // FrmDoiMK
             // 
@@ -114,11 +133,13 @@
             this.ClientSize = new System.Drawing.Size(422, 353);
             this.Controls.Add(this.txtNhapLaiMK);
             this.Controls.Add(this.txtMKMoi);
+            this.Controls.Add(this.txtTaiKhoan);
             this.Controls.Add(this.txtMKCu);
             this.Controls.Add(this.btHuy);
             this.Controls.Add(this.btDoiMK);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblMKMoi);
+            this.Controls.Add(this.lblTaiKhoan);
             this.Controls.Add(this.lblMKCu);
             this.Name = "FrmDoiMK";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -138,5 +159,7 @@
         private System.Windows.Forms.TextBox txtMKCu;
         private System.Windows.Forms.TextBox txtMKMoi;
         private System.Windows.Forms.TextBox txtNhapLaiMK;
+        private System.Windows.Forms.Label lblTaiKhoan;
+        private System.Windows.Forms.TextBox txtTaiKhoan;
     }
 }

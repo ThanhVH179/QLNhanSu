@@ -99,6 +99,7 @@ namespace DTO_QLNhanSu
             get { return bacLuong; }
             set { bacLuong = value; }
         }
+        public DTO_NhanVien() { }
 
         public DTO_NhanVien(string manv, string hoten, string email, DateTime ngaysinh, string quequan, int gioitinh, string dantoc,
                             string sdt, int vaitro, string hinh, string matkhau, string maPB, string chucvu, string trinhdoHV, string bacluong)
