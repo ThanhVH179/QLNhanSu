@@ -34,6 +34,7 @@ namespace DTO_QLNhanSu
             set { heSoLuong = value; }
         }
 
+        public DTO_Luong() { }
         public DTO_Luong(string bacluong, double luongcoban, double hesophucap, double hesoluong)
         {
             this.bacLuong = bacluong;
