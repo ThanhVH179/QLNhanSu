@@ -73,7 +73,7 @@
             this.txtTaiKhoan.Location = new System.Drawing.Point(128, 100);
             this.txtTaiKhoan.Name = "txtTaiKhoan";
             this.txtTaiKhoan.Size = new System.Drawing.Size(250, 22);
-            this.txtTaiKhoan.TabIndex = 3;
+            this.txtTaiKhoan.TabIndex = 1;
             // 
             // txtMatKhau
             // 
@@ -81,7 +81,7 @@
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.PasswordChar = '*';
             this.txtMatKhau.Size = new System.Drawing.Size(250, 22);
-            this.txtMatKhau.TabIndex = 4;
+            this.txtMatKhau.TabIndex = 2;
             // 
             // btDangNhap
             // 
@@ -91,7 +91,7 @@
             this.btDangNhap.Location = new System.Drawing.Point(69, 235);
             this.btDangNhap.Name = "btDangNhap";
             this.btDangNhap.Size = new System.Drawing.Size(109, 40);
-            this.btDangNhap.TabIndex = 5;
+            this.btDangNhap.TabIndex = 3;
             this.btDangNhap.Text = "Đăng nhập";
             this.btDangNhap.UseVisualStyleBackColor = false;
             this.btDangNhap.Click += new System.EventHandler(this.btDangNhap_Click);
@@ -103,7 +103,7 @@
             this.btQuenMatKhau.Location = new System.Drawing.Point(219, 234);
             this.btQuenMatKhau.Name = "btQuenMatKhau";
             this.btQuenMatKhau.Size = new System.Drawing.Size(152, 40);
-            this.btQuenMatKhau.TabIndex = 6;
+            this.btQuenMatKhau.TabIndex = 4;
             this.btQuenMatKhau.Text = "Quên mật khẩu";
             this.btQuenMatKhau.UseVisualStyleBackColor = true;
             // 

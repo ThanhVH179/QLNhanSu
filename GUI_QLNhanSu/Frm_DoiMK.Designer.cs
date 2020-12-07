@@ -75,23 +75,26 @@
             this.btDoiMK.Location = new System.Drawing.Point(92, 253);
             this.btDoiMK.Name = "btDoiMK";
             this.btDoiMK.Size = new System.Drawing.Size(120, 40);
-            this.btDoiMK.TabIndex = 1;
+            this.btDoiMK.TabIndex = 5;
             this.btDoiMK.Text = "Đổi mật khẩu";
             this.btDoiMK.UseVisualStyleBackColor = true;
+            this.btDoiMK.Click += new System.EventHandler(this.btDoiMK_Click);
             // 
             // btHuy
             // 
             this.btHuy.Location = new System.Drawing.Point(234, 253);
             this.btHuy.Name = "btHuy";
             this.btHuy.Size = new System.Drawing.Size(120, 40);
-            this.btHuy.TabIndex = 1;
+            this.btHuy.TabIndex = 6;
             this.btHuy.Text = "Hủy";
             this.btHuy.UseVisualStyleBackColor = true;
+            this.btHuy.Click += new System.EventHandler(this.btHuy_Click);
             // 
             // txtMKCu
             // 
             this.txtMKCu.Location = new System.Drawing.Point(174, 75);
             this.txtMKCu.Name = "txtMKCu";
+            this.txtMKCu.PasswordChar = '*';
             this.txtMKCu.Size = new System.Drawing.Size(220, 22);
             this.txtMKCu.TabIndex = 2;
             // 
@@ -99,15 +102,17 @@
             // 
             this.txtMKMoi.Location = new System.Drawing.Point(174, 122);
             this.txtMKMoi.Name = "txtMKMoi";
+            this.txtMKMoi.PasswordChar = '*';
             this.txtMKMoi.Size = new System.Drawing.Size(220, 22);
-            this.txtMKMoi.TabIndex = 2;
+            this.txtMKMoi.TabIndex = 3;
             // 
             // txtNhapLaiMK
             // 
             this.txtNhapLaiMK.Location = new System.Drawing.Point(174, 173);
             this.txtNhapLaiMK.Name = "txtNhapLaiMK";
+            this.txtNhapLaiMK.PasswordChar = '*';
             this.txtNhapLaiMK.Size = new System.Drawing.Size(220, 22);
-            this.txtNhapLaiMK.TabIndex = 2;
+            this.txtNhapLaiMK.TabIndex = 4;
             // 
             // lblTaiKhoan
             // 
@@ -124,10 +129,11 @@
             this.txtTaiKhoan.Location = new System.Drawing.Point(174, 33);
             this.txtTaiKhoan.Name = "txtTaiKhoan";
             this.txtTaiKhoan.Size = new System.Drawing.Size(220, 22);
-            this.txtTaiKhoan.TabIndex = 2;
+            this.txtTaiKhoan.TabIndex = 1;
             // 
             // FrmDoiMK
             // 
+            this.AcceptButton = this.btDoiMK;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(422, 353);

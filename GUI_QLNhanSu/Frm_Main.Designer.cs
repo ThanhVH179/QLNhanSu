@@ -92,6 +92,7 @@
             // 
             // DoiMatKhauToolStripMenuItem
             // 
+            this.DoiMatKhauToolStripMenuItem.Enabled = false;
             this.DoiMatKhauToolStripMenuItem.Name = "DoiMatKhauToolStripMenuItem";
             this.DoiMatKhauToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.DoiMatKhauToolStripMenuItem.Text = "Đồi mật khẩu";

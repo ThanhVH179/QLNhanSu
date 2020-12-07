@@ -29,6 +29,7 @@ namespace GUI_QLNhanSu
             {
                 DangNhapToolStripMenuItem.Enabled = false;
                 DangXuatToolStripMenuItem.Enabled = true;
+                DoiMatKhauToolStripMenuItem.Enabled = true;
                 DanhMucToolStripMenuItem.Visible = true;
                 thongTinNVMenuItem.Visible = true;
                 thongTinNVMenuItem.Text = "Chào " + FrmMain.mail;
@@ -37,11 +38,18 @@ namespace GUI_QLNhanSu
             {
                 DangNhapToolStripMenuItem.Enabled = true;
                 DangXuatToolStripMenuItem.Enabled = false;
+                DoiMatKhauToolStripMenuItem.Enabled = false;
                 DanhMucToolStripMenuItem.Visible = false;
                 thongTinNVMenuItem.Visible = false;
             }
         }
         void FrmLogin_Closed(object sender, FormClosedEventArgs e)
+        {
+            this.Refresh();
+            FrmMain_Load(sender, e);
+        }
+
+        void FrmDoiMK_Closed(object sender, FormClosedEventArgs e)
         {
             this.Refresh();
             FrmMain_Load(sender, e);
@@ -164,9 +172,10 @@ namespace GUI_QLNhanSu
 
         private void DoiMatKhauToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmDoiMK Fdmk = new FrmDoiMK();
+            FrmDoiMK Fdmk = new FrmDoiMK(FrmMain.mail);
             Fdmk.MdiParent = this;
             Fdmk.Show();
+            Fdmk.FormClosed += new FormClosedEventHandler(FrmDoiMK_Closed);
         }
 
         private void DangXuatToolStripMenuItem_Click(object sender, EventArgs e)
