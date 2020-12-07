@@ -43,10 +43,10 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.btTimKiem = new System.Windows.Forms.Button();
             this.btXoa = new System.Windows.Forms.Button();
+            this.btSua = new System.Windows.Forms.Button();
             this.btLuu = new System.Windows.Forms.Button();
             this.btThem = new System.Windows.Forms.Button();
             this.txtTimkiem = new System.Windows.Forms.TextBox();
-            this.btSua = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhongBan)).BeginInit();
@@ -139,14 +139,19 @@
             // 
             // dgvPhongBan
             // 
+            this.dgvPhongBan.AllowUserToAddRows = false;
+            this.dgvPhongBan.AllowUserToDeleteRows = false;
+            this.dgvPhongBan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPhongBan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPhongBan.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvPhongBan.Location = new System.Drawing.Point(0, 0);
             this.dgvPhongBan.Name = "dgvPhongBan";
+            this.dgvPhongBan.RowHeadersVisible = false;
             this.dgvPhongBan.RowHeadersWidth = 51;
             this.dgvPhongBan.RowTemplate.Height = 24;
             this.dgvPhongBan.Size = new System.Drawing.Size(1382, 320);
             this.dgvPhongBan.TabIndex = 33;
+            this.dgvPhongBan.Click += new System.EventHandler(this.dgvPhongBan_Click);
             // 
             // panel3
             // 
@@ -174,6 +179,7 @@
             this.btTimKiem.Text = "Tìm kiếm";
             this.btTimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btTimKiem.UseVisualStyleBackColor = true;
+            this.btTimKiem.Click += new System.EventHandler(this.btTimKiem_Click);
             // 
             // btXoa
             // 
@@ -187,6 +193,21 @@
             this.btXoa.Text = "Xóa";
             this.btXoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btXoa.UseVisualStyleBackColor = true;
+            this.btXoa.Click += new System.EventHandler(this.btXoa_Click);
+            // 
+            // btSua
+            // 
+            this.btSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btSua.ImageIndex = 2;
+            this.btSua.ImageList = this.imageList1;
+            this.btSua.Location = new System.Drawing.Point(971, 26);
+            this.btSua.Name = "btSua";
+            this.btSua.Size = new System.Drawing.Size(100, 40);
+            this.btSua.TabIndex = 36;
+            this.btSua.Text = "Sửa";
+            this.btSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btSua.UseVisualStyleBackColor = true;
+            this.btSua.Click += new System.EventHandler(this.btSua_Click);
             // 
             // btLuu
             // 
@@ -214,27 +235,17 @@
             this.btThem.Text = "Thêm";
             this.btThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btThem.UseVisualStyleBackColor = true;
+            this.btThem.Click += new System.EventHandler(this.btThem_Click);
             // 
             // txtTimkiem
             // 
+            this.txtTimkiem.BackColor = System.Drawing.Color.LightGray;
             this.txtTimkiem.Location = new System.Drawing.Point(437, 35);
             this.txtTimkiem.Name = "txtTimkiem";
             this.txtTimkiem.Size = new System.Drawing.Size(250, 22);
             this.txtTimkiem.TabIndex = 34;
-            // 
-            // btSua
-            // 
-            this.btSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btSua.ImageIndex = 2;
-            this.btSua.ImageList = this.imageList1;
-            this.btSua.Location = new System.Drawing.Point(971, 26);
-            this.btSua.Name = "btSua";
-            this.btSua.Size = new System.Drawing.Size(100, 40);
-            this.btSua.TabIndex = 36;
-            this.btSua.Text = "Sửa";
-            this.btSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btSua.UseVisualStyleBackColor = true;
-            this.btSua.Click += new System.EventHandler(this.btLuu_Click);
+            this.txtTimkiem.Text = "Mời nhập tên phòng ... ";
+            this.txtTimkiem.Click += new System.EventHandler(this.txtTimkiem_Click);
             // 
             // FrmPhongBan
             // 

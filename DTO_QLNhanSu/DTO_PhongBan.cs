@@ -32,6 +32,8 @@ namespace DTO_QLNhanSu
             get { return truongPhong; }
             set { truongPhong = value; }
         }
+        public DTO_PhongBan() { }
+        
     }
 
 
