@@ -87,7 +87,7 @@
             this.txtHeSoLuong.Location = new System.Drawing.Point(691, 45);
             this.txtHeSoLuong.Name = "txtHeSoLuong";
             this.txtHeSoLuong.Size = new System.Drawing.Size(216, 22);
-            this.txtHeSoLuong.TabIndex = 15;
+            this.txtHeSoLuong.TabIndex = 3;
             // 
             // txtHeSoPhuCap
             // 
@@ -95,7 +95,7 @@
             this.txtHeSoPhuCap.Location = new System.Drawing.Point(691, 91);
             this.txtHeSoPhuCap.Name = "txtHeSoPhuCap";
             this.txtHeSoPhuCap.Size = new System.Drawing.Size(216, 22);
-            this.txtHeSoPhuCap.TabIndex = 14;
+            this.txtHeSoPhuCap.TabIndex = 4;
             // 
             // txtLuongCoBan
             // 
@@ -103,7 +103,7 @@
             this.txtLuongCoBan.Location = new System.Drawing.Point(312, 92);
             this.txtLuongCoBan.Name = "txtLuongCoBan";
             this.txtLuongCoBan.Size = new System.Drawing.Size(216, 22);
-            this.txtLuongCoBan.TabIndex = 13;
+            this.txtLuongCoBan.TabIndex = 2;
             // 
             // txtBacLuong
             // 
@@ -111,7 +111,7 @@
             this.txtBacLuong.Location = new System.Drawing.Point(312, 45);
             this.txtBacLuong.Name = "txtBacLuong";
             this.txtBacLuong.Size = new System.Drawing.Size(216, 22);
-            this.txtBacLuong.TabIndex = 12;
+            this.txtBacLuong.TabIndex = 1;
             // 
             // lblHesophucap
             // 
@@ -200,7 +200,7 @@
             this.btXoa.Location = new System.Drawing.Point(1023, 36);
             this.btXoa.Name = "btXoa";
             this.btXoa.Size = new System.Drawing.Size(100, 40);
-            this.btXoa.TabIndex = 34;
+            this.btXoa.TabIndex = 10;
             this.btXoa.Text = "Xóa";
             this.btXoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btXoa.UseVisualStyleBackColor = true;
@@ -214,7 +214,7 @@
             this.btSua.Location = new System.Drawing.Point(897, 36);
             this.btSua.Name = "btSua";
             this.btSua.Size = new System.Drawing.Size(100, 40);
-            this.btSua.TabIndex = 33;
+            this.btSua.TabIndex = 9;
             this.btSua.Text = "Sửa";
             this.btSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btSua.UseVisualStyleBackColor = true;
@@ -228,7 +228,7 @@
             this.btLuu.Location = new System.Drawing.Point(772, 36);
             this.btLuu.Name = "btLuu";
             this.btLuu.Size = new System.Drawing.Size(100, 40);
-            this.btLuu.TabIndex = 33;
+            this.btLuu.TabIndex = 8;
             this.btLuu.Text = "Lưu";
             this.btLuu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btLuu.UseVisualStyleBackColor = true;
@@ -242,7 +242,7 @@
             this.btTimKiem.Location = new System.Drawing.Point(199, 36);
             this.btTimKiem.Name = "btTimKiem";
             this.btTimKiem.Size = new System.Drawing.Size(120, 40);
-            this.btTimKiem.TabIndex = 31;
+            this.btTimKiem.TabIndex = 5;
             this.btTimKiem.Text = "Tìm kiếm";
             this.btTimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btTimKiem.UseVisualStyleBackColor = true;
@@ -256,7 +256,7 @@
             this.btThem.Location = new System.Drawing.Point(645, 36);
             this.btThem.Name = "btThem";
             this.btThem.Size = new System.Drawing.Size(100, 40);
-            this.btThem.TabIndex = 32;
+            this.btThem.TabIndex = 7;
             this.btThem.Text = "Thêm";
             this.btThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btThem.UseVisualStyleBackColor = true;
@@ -268,7 +268,7 @@
             this.txtTimkiem.Location = new System.Drawing.Point(334, 45);
             this.txtTimkiem.Name = "txtTimkiem";
             this.txtTimkiem.Size = new System.Drawing.Size(250, 22);
-            this.txtTimkiem.TabIndex = 30;
+            this.txtTimkiem.TabIndex = 6;
             this.txtTimkiem.Text = "Mời nhập bậc lương...";
             this.txtTimkiem.Click += new System.EventHandler(this.txtTimkiem_Click);
             // 

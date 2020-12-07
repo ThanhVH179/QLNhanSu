@@ -34,7 +34,7 @@ namespace DTO_QLNhanSu
             set { thoiGian = value; }
         }
 
-        public DTO_ChamCong(string macc, string manv, string chuthich, DateTime thoigian)
+        public DTO_ChamCong(string macc, string manv, DateTime thoigian, string chuthich)
         {
             this.maCC = macc;
             this.maNV = manv;

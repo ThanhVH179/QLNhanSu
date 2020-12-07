@@ -9,9 +9,9 @@ using DTO_QLNhanSu;
 
 namespace DAL_QLNhanSu
 {
-    public class DAL_Luong : DBConnect
+    public class DAL_ChamCong : DBConnect
     {
-        public DataTable getLuong()
+        public DataTable getChamCong()
         {
             try
             {
@@ -19,7 +19,7 @@ namespace DAL_QLNhanSu
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conn;
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "sp_DanhSachLuong";
+                cmd.CommandText = "sp_DanhSachChamCong";
                 DataTable dtLuong = new DataTable();
                 dtLuong.Load(cmd.ExecuteReader());
                 return dtLuong;
@@ -30,7 +30,7 @@ namespace DAL_QLNhanSu
             }
         }
 
-        public bool insertLuong(DTO_Luong luong)
+        public bool insertChamCong(DTO_ChamCong chamcong)
         {
             try
             {
@@ -38,13 +38,11 @@ namespace DAL_QLNhanSu
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conn;
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "sp_InsertDataIntoLuong";
-                cmd.Parameters.AddWithValue("bacLuong", luong.bacLuong);
-                cmd.Parameters.AddWithValue("luongCB", luong.luongCoBan);
-                cmd.Parameters.AddWithValue("heSoLuong", luong.heSoLuong);
-                
-                cmd.Parameters.AddWithValue("heSoPhuCap", luong.heSoPhuCap);
-
+                cmd.CommandText = "sp_InsertDataIntoChamCong";
+                cmd.Parameters.AddWithValue("maCC", chamcong.maCC);
+                cmd.Parameters.AddWithValue("maNV", chamcong.maNV);
+                cmd.Parameters.AddWithValue("thoiGian", chamcong.thoiGian);
+                cmd.Parameters.AddWithValue("chuThich", chamcong.thoiGian);
                 if (cmd.ExecuteNonQuery() > 0)
                 {
                     return true;
@@ -59,7 +57,8 @@ namespace DAL_QLNhanSu
             }
             return false;
         }
-        public bool updateLuong(DTO_Luong luong)
+
+        public bool deleteChamCong(string macc)
         {
             try
             {
@@ -67,11 +66,8 @@ namespace DAL_QLNhanSu
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conn;
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "sp_UpdateDataIntoLuong";
-                cmd.Parameters.AddWithValue("bacLuong", luong.bacLuong);
-                cmd.Parameters.AddWithValue("luongCB", luong.luongCoBan);
-                cmd.Parameters.AddWithValue("heSoLuong", luong.heSoLuong);
-                cmd.Parameters.AddWithValue("heSoPhuCap", luong.heSoPhuCap);
+                cmd.CommandText = "sp_DeleteFromChamCong";
+                cmd.Parameters.AddWithValue("maCC", macc);
                 if (cmd.ExecuteNonQuery() > 0)
                 {
                     return true;
@@ -83,7 +79,8 @@ namespace DAL_QLNhanSu
             finally { conn.Close(); }
             return false;
         }
-        public bool deleteLuong(string bacLuong)
+
+        public DataTable searchChamCong(string manv)
         {
             try
             {
@@ -91,29 +88,8 @@ namespace DAL_QLNhanSu
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conn;
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "sp_DeleteDataFromLuong";
-                cmd.Parameters.AddWithValue("bacLuong", bacLuong);
-                if (cmd.ExecuteNonQuery() > 0)
-                {
-                    return true;
-                }
-            }
-            catch (Exception)
-            {
-            }
-            finally { conn.Close(); }
-            return false;
-        }
-        public DataTable searchLuong(string bacLuong)
-        {
-            try
-            {
-                conn.Open();
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = conn;
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "sp_TimLuong";
-                cmd.Parameters.AddWithValue("bacLuong", bacLuong);
+                cmd.CommandText = "sp_TimKiemChamCong";
+                cmd.Parameters.AddWithValue("maNV", manv);
                 DataTable dt = new DataTable();
                 dt.Load(cmd.ExecuteReader());
                 return dt;
@@ -123,6 +99,43 @@ namespace DAL_QLNhanSu
                 conn.Close();
             }
         }
-        
+
+        public DataTable ngayNghiNhanVien(string manv)
+        {
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "sp_NgayNghiNhanVien";
+                cmd.Parameters.AddWithValue("maNV", manv);
+                DataTable dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+                return dt;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+        public DataTable thongKeNgayNghi()
+        {
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "sp_ThongKeSoNgayNghi";
+                DataTable dtLuong = new DataTable();
+                dtLuong.Load(cmd.ExecuteReader());
+                return dtLuong;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
     }
 }

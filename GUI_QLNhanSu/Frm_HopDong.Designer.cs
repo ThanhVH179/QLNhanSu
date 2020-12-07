@@ -45,10 +45,10 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvHopDong = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btLuu = new System.Windows.Forms.Button();
             this.btThem = new System.Windows.Forms.Button();
             this.btTimKiem = new System.Windows.Forms.Button();
             this.txtTimkiem = new System.Windows.Forms.TextBox();
-            this.btLuu = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHopDong)).BeginInit();
@@ -98,7 +98,7 @@
             this.txtMaHD.Location = new System.Drawing.Point(256, 16);
             this.txtMaHD.Name = "txtMaHD";
             this.txtMaHD.Size = new System.Drawing.Size(229, 22);
-            this.txtMaHD.TabIndex = 30;
+            this.txtMaHD.TabIndex = 1;
             // 
             // lblMaHD
             // 
@@ -116,21 +116,24 @@
             this.cmbLoaiHD.Location = new System.Drawing.Point(256, 75);
             this.cmbLoaiHD.Name = "cmbLoaiHD";
             this.cmbLoaiHD.Size = new System.Drawing.Size(229, 24);
-            this.cmbLoaiHD.TabIndex = 28;
+            this.cmbLoaiHD.TabIndex = 2;
             // 
             // dtpNgayKetThuc
             // 
+            this.dtpNgayKetThuc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNgayKetThuc.Location = new System.Drawing.Point(640, 73);
             this.dtpNgayKetThuc.Name = "dtpNgayKetThuc";
             this.dtpNgayKetThuc.Size = new System.Drawing.Size(239, 22);
-            this.dtpNgayKetThuc.TabIndex = 27;
+            this.dtpNgayKetThuc.TabIndex = 5;
             // 
             // dtpNgayKi
             // 
+            this.dtpNgayKi.CustomFormat = "yyyy-mm-dd";
+            this.dtpNgayKi.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNgayKi.Location = new System.Drawing.Point(256, 144);
             this.dtpNgayKi.Name = "dtpNgayKi";
             this.dtpNgayKi.Size = new System.Drawing.Size(229, 22);
-            this.dtpNgayKi.TabIndex = 26;
+            this.dtpNgayKi.TabIndex = 3;
             // 
             // lblNgayKetThuc
             // 
@@ -157,7 +160,7 @@
             this.txtMaNV.Location = new System.Drawing.Point(623, 16);
             this.txtMaNV.Name = "txtMaNV";
             this.txtMaNV.Size = new System.Drawing.Size(229, 22);
-            this.txtMaNV.TabIndex = 23;
+            this.txtMaNV.TabIndex = 4;
             // 
             // lblMaNV
             // 
@@ -201,6 +204,19 @@
             this.panel3.Size = new System.Drawing.Size(982, 107);
             this.panel3.TabIndex = 30;
             // 
+            // btLuu
+            // 
+            this.btLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btLuu.ImageIndex = 1;
+            this.btLuu.ImageList = this.imageListBt;
+            this.btLuu.Location = new System.Drawing.Point(879, 35);
+            this.btLuu.Name = "btLuu";
+            this.btLuu.Size = new System.Drawing.Size(100, 40);
+            this.btLuu.TabIndex = 9;
+            this.btLuu.Text = "Lưu";
+            this.btLuu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btLuu.UseVisualStyleBackColor = true;
+            // 
             // btThem
             // 
             this.btThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -209,7 +225,7 @@
             this.btThem.Location = new System.Drawing.Point(752, 35);
             this.btThem.Name = "btThem";
             this.btThem.Size = new System.Drawing.Size(100, 40);
-            this.btThem.TabIndex = 36;
+            this.btThem.TabIndex = 8;
             this.btThem.Text = "Thêm";
             this.btThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btThem.UseVisualStyleBackColor = true;
@@ -222,7 +238,7 @@
             this.btTimKiem.Location = new System.Drawing.Point(337, 35);
             this.btTimKiem.Name = "btTimKiem";
             this.btTimKiem.Size = new System.Drawing.Size(120, 40);
-            this.btTimKiem.TabIndex = 35;
+            this.btTimKiem.TabIndex = 6;
             this.btTimKiem.Text = "Tìm kiếm";
             this.btTimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btTimKiem.UseVisualStyleBackColor = true;
@@ -232,20 +248,7 @@
             this.txtTimkiem.Location = new System.Drawing.Point(474, 44);
             this.txtTimkiem.Name = "txtTimkiem";
             this.txtTimkiem.Size = new System.Drawing.Size(250, 22);
-            this.txtTimkiem.TabIndex = 34;
-            // 
-            // btLuu
-            // 
-            this.btLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btLuu.ImageIndex = 1;
-            this.btLuu.ImageList = this.imageListBt;
-            this.btLuu.Location = new System.Drawing.Point(879, 35);
-            this.btLuu.Name = "btLuu";
-            this.btLuu.Size = new System.Drawing.Size(100, 40);
-            this.btLuu.TabIndex = 36;
-            this.btLuu.Text = "Lưu";
-            this.btLuu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btLuu.UseVisualStyleBackColor = true;
+            this.txtTimkiem.TabIndex = 7;
             // 
             // FrmHopDong
             // 

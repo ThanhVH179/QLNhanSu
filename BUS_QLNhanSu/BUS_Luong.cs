@@ -33,10 +33,6 @@ namespace BUS_QLNhanSu
         {
             return dalLuong.searchLuong(bacLuong);
         }
-        public DataTable danhsachLuong()
-        {
-            return dalLuong.danhsachLuong();
-        }
         
     }
 }
