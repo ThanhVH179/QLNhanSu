@@ -36,19 +36,20 @@
             this.lblMota = new System.Windows.Forms.Label();
             this.cmbLoai = new System.Windows.Forms.ComboBox();
             this.lblLoai = new System.Windows.Forms.Label();
-            this.txtMaNV = new System.Windows.Forms.TextBox();
+            this.txtMaKTKL = new System.Windows.Forms.TextBox();
+            this.lblMaKTKL = new System.Windows.Forms.Label();
             this.lblMaNV = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btDS = new System.Windows.Forms.Button();
             this.btXoa = new System.Windows.Forms.Button();
             this.btSua = new System.Windows.Forms.Button();
             this.btLuu = new System.Windows.Forms.Button();
             this.btThem = new System.Windows.Forms.Button();
             this.btTimKiem = new System.Windows.Forms.Button();
             this.txtTimkiem = new System.Windows.Forms.TextBox();
-            this.lblMaKTKL = new System.Windows.Forms.Label();
-            this.txtMaKTKL = new System.Windows.Forms.TextBox();
+            this.cmbMaNV = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -64,15 +65,16 @@
             this.imageList1.Images.SetKeyName(2, "edit.png");
             this.imageList1.Images.SetKeyName(3, "Actions-edit-delete-icon.png");
             this.imageList1.Images.SetKeyName(4, "find.png");
+            this.imageList1.Images.SetKeyName(5, "Data-List-icon.png");
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.txtMoTa);
             this.panel1.Controls.Add(this.lblMota);
+            this.panel1.Controls.Add(this.cmbMaNV);
             this.panel1.Controls.Add(this.cmbLoai);
             this.panel1.Controls.Add(this.lblLoai);
             this.panel1.Controls.Add(this.txtMaKTKL);
-            this.panel1.Controls.Add(this.txtMaNV);
             this.panel1.Controls.Add(this.lblMaKTKL);
             this.panel1.Controls.Add(this.lblMaNV);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -102,6 +104,9 @@
             // cmbLoai
             // 
             this.cmbLoai.FormattingEnabled = true;
+            this.cmbLoai.Items.AddRange(new object[] {
+            "Khen thưởng",
+            "Kỷ luật"});
             this.cmbLoai.Location = new System.Drawing.Point(778, 21);
             this.cmbLoai.Name = "cmbLoai";
             this.cmbLoai.Size = new System.Drawing.Size(180, 24);
@@ -117,12 +122,22 @@
             this.lblLoai.TabIndex = 17;
             this.lblLoai.Text = "Loại:";
             // 
-            // txtMaNV
+            // txtMaKTKL
             // 
-            this.txtMaNV.Location = new System.Drawing.Point(422, 71);
-            this.txtMaNV.Name = "txtMaNV";
-            this.txtMaNV.Size = new System.Drawing.Size(180, 22);
-            this.txtMaNV.TabIndex = 16;
+            this.txtMaKTKL.Location = new System.Drawing.Point(422, 23);
+            this.txtMaKTKL.Name = "txtMaKTKL";
+            this.txtMaKTKL.Size = new System.Drawing.Size(180, 22);
+            this.txtMaKTKL.TabIndex = 16;
+            // 
+            // lblMaKTKL
+            // 
+            this.lblMaKTKL.AutoSize = true;
+            this.lblMaKTKL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaKTKL.Location = new System.Drawing.Point(337, 22);
+            this.lblMaKTKL.Name = "lblMaKTKL";
+            this.lblMaKTKL.Size = new System.Drawing.Size(74, 18);
+            this.lblMaKTKL.TabIndex = 15;
+            this.lblMaKTKL.Text = "Mã KTKL:";
             // 
             // lblMaNV
             // 
@@ -156,6 +171,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.btDS);
             this.panel3.Controls.Add(this.btXoa);
             this.panel3.Controls.Add(this.btSua);
             this.panel3.Controls.Add(this.btLuu);
@@ -168,12 +184,25 @@
             this.panel3.Size = new System.Drawing.Size(1382, 154);
             this.panel3.TabIndex = 34;
             // 
+            // btDS
+            // 
+            this.btDS.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btDS.ImageIndex = 5;
+            this.btDS.ImageList = this.imageList1;
+            this.btDS.Location = new System.Drawing.Point(1101, 28);
+            this.btDS.Name = "btDS";
+            this.btDS.Size = new System.Drawing.Size(125, 40);
+            this.btDS.TabIndex = 45;
+            this.btDS.Text = "Danh sách";
+            this.btDS.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btDS.UseVisualStyleBackColor = true;
+            // 
             // btXoa
             // 
             this.btXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btXoa.ImageIndex = 3;
             this.btXoa.ImageList = this.imageList1;
-            this.btXoa.Location = new System.Drawing.Point(1061, 35);
+            this.btXoa.Location = new System.Drawing.Point(980, 28);
             this.btXoa.Name = "btXoa";
             this.btXoa.Size = new System.Drawing.Size(100, 40);
             this.btXoa.TabIndex = 41;
@@ -186,7 +215,7 @@
             this.btSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btSua.ImageIndex = 2;
             this.btSua.ImageList = this.imageList1;
-            this.btSua.Location = new System.Drawing.Point(941, 35);
+            this.btSua.Location = new System.Drawing.Point(860, 28);
             this.btSua.Name = "btSua";
             this.btSua.Size = new System.Drawing.Size(100, 40);
             this.btSua.TabIndex = 40;
@@ -199,7 +228,7 @@
             this.btLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btLuu.ImageIndex = 1;
             this.btLuu.ImageList = this.imageList1;
-            this.btLuu.Location = new System.Drawing.Point(816, 35);
+            this.btLuu.Location = new System.Drawing.Point(735, 28);
             this.btLuu.Name = "btLuu";
             this.btLuu.Size = new System.Drawing.Size(100, 40);
             this.btLuu.TabIndex = 39;
@@ -212,7 +241,7 @@
             this.btThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btThem.ImageIndex = 0;
             this.btThem.ImageList = this.imageList1;
-            this.btThem.Location = new System.Drawing.Point(693, 35);
+            this.btThem.Location = new System.Drawing.Point(612, 28);
             this.btThem.Name = "btThem";
             this.btThem.Size = new System.Drawing.Size(100, 40);
             this.btThem.TabIndex = 39;
@@ -225,7 +254,7 @@
             this.btTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btTimKiem.ImageIndex = 4;
             this.btTimKiem.ImageList = this.imageList1;
-            this.btTimKiem.Location = new System.Drawing.Point(274, 35);
+            this.btTimKiem.Location = new System.Drawing.Point(193, 28);
             this.btTimKiem.Name = "btTimKiem";
             this.btTimKiem.Size = new System.Drawing.Size(120, 40);
             this.btTimKiem.TabIndex = 38;
@@ -235,27 +264,21 @@
             // 
             // txtTimkiem
             // 
-            this.txtTimkiem.Location = new System.Drawing.Point(400, 44);
+            this.txtTimkiem.Location = new System.Drawing.Point(319, 37);
             this.txtTimkiem.Name = "txtTimkiem";
             this.txtTimkiem.Size = new System.Drawing.Size(250, 22);
             this.txtTimkiem.TabIndex = 37;
             // 
-            // lblMaKTKL
+            // cmbMaNV
             // 
-            this.lblMaKTKL.AutoSize = true;
-            this.lblMaKTKL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMaKTKL.Location = new System.Drawing.Point(337, 22);
-            this.lblMaKTKL.Name = "lblMaKTKL";
-            this.lblMaKTKL.Size = new System.Drawing.Size(74, 18);
-            this.lblMaKTKL.TabIndex = 15;
-            this.lblMaKTKL.Text = "Mã KTKL:";
-            // 
-            // txtMaKTKL
-            // 
-            this.txtMaKTKL.Location = new System.Drawing.Point(422, 23);
-            this.txtMaKTKL.Name = "txtMaKTKL";
-            this.txtMaKTKL.Size = new System.Drawing.Size(180, 22);
-            this.txtMaKTKL.TabIndex = 16;
+            this.cmbMaNV.FormattingEnabled = true;
+            this.cmbMaNV.Items.AddRange(new object[] {
+            "Khen thưởng",
+            "Kỷ luật"});
+            this.cmbMaNV.Location = new System.Drawing.Point(422, 70);
+            this.cmbMaNV.Name = "cmbMaNV";
+            this.cmbMaNV.Size = new System.Drawing.Size(180, 24);
+            this.cmbMaNV.TabIndex = 18;
             // 
             // FrmKTKL
             // 
@@ -285,7 +308,6 @@
         private System.Windows.Forms.Label lblMota;
         private System.Windows.Forms.ComboBox cmbLoai;
         private System.Windows.Forms.Label lblLoai;
-        private System.Windows.Forms.TextBox txtMaNV;
         private System.Windows.Forms.Label lblMaNV;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -298,5 +320,7 @@
         private System.Windows.Forms.Button btLuu;
         private System.Windows.Forms.TextBox txtMaKTKL;
         private System.Windows.Forms.Label lblMaKTKL;
+        private System.Windows.Forms.Button btDS;
+        private System.Windows.Forms.ComboBox cmbMaNV;
     }
 }

@@ -42,9 +42,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bus_ChamCong.cs" />
+    <Compile Include="BUS_HopDong.cs" />
+    <Compile Include="BUS_KTKL.cs" />
     <Compile Include="BUS_Luong.cs" />
     <Compile Include="BUS_NhanVien.cs" />
     <Compile Include="BUS_PhongBan.cs" />
+    <Compile Include="BUS_SuCo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

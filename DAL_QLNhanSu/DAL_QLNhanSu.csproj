@@ -42,9 +42,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL_ChamCong.cs" />
+    <Compile Include="DAL_HopDong.cs" />
+    <Compile Include="DAL_KTKL.cs" />
     <Compile Include="DAL_Luong.cs" />
     <Compile Include="DAL_NhanVien.cs" />
     <Compile Include="DAL_PhongBan.cs" />
+    <Compile Include="DAL_SuCo.cs" />
     <Compile Include="DBConnect.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

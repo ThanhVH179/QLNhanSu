@@ -19,6 +19,10 @@ namespace BUS_QLNhanSu
         {
             return dalNhanVien.NhanVienDangNhap(nv);
         }
+        public DataTable DanhSachMaNV()
+        {
+            return dalNhanVien.danhSachMaNV();
+        }
         public string encryption(string pw)
         {
             MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider();

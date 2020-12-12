@@ -47,6 +47,7 @@
             this.btLuu = new System.Windows.Forms.Button();
             this.btThem = new System.Windows.Forms.Button();
             this.txtTimkiem = new System.Windows.Forms.TextBox();
+            this.btDS = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhongBan)).BeginInit();
@@ -62,6 +63,7 @@
             this.imageList1.Images.SetKeyName(2, "edit.png");
             this.imageList1.Images.SetKeyName(3, "Actions-edit-delete-icon.png");
             this.imageList1.Images.SetKeyName(4, "find.png");
+            this.imageList1.Images.SetKeyName(5, "Data-List-icon.png");
             // 
             // panel1
             // 
@@ -155,6 +157,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.btDS);
             this.panel3.Controls.Add(this.btTimKiem);
             this.panel3.Controls.Add(this.btXoa);
             this.panel3.Controls.Add(this.btSua);
@@ -172,7 +175,7 @@
             this.btTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btTimKiem.ImageIndex = 4;
             this.btTimKiem.ImageList = this.imageList1;
-            this.btTimKiem.Location = new System.Drawing.Point(311, 26);
+            this.btTimKiem.Location = new System.Drawing.Point(203, 26);
             this.btTimKiem.Name = "btTimKiem";
             this.btTimKiem.Size = new System.Drawing.Size(120, 40);
             this.btTimKiem.TabIndex = 4;
@@ -186,7 +189,7 @@
             this.btXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btXoa.ImageIndex = 3;
             this.btXoa.ImageList = this.imageList1;
-            this.btXoa.Location = new System.Drawing.Point(1092, 26);
+            this.btXoa.Location = new System.Drawing.Point(984, 26);
             this.btXoa.Name = "btXoa";
             this.btXoa.Size = new System.Drawing.Size(100, 40);
             this.btXoa.TabIndex = 9;
@@ -200,7 +203,7 @@
             this.btSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btSua.ImageIndex = 2;
             this.btSua.ImageList = this.imageList1;
-            this.btSua.Location = new System.Drawing.Point(971, 26);
+            this.btSua.Location = new System.Drawing.Point(863, 26);
             this.btSua.Name = "btSua";
             this.btSua.Size = new System.Drawing.Size(100, 40);
             this.btSua.TabIndex = 8;
@@ -214,7 +217,7 @@
             this.btLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btLuu.ImageIndex = 1;
             this.btLuu.ImageList = this.imageList1;
-            this.btLuu.Location = new System.Drawing.Point(852, 26);
+            this.btLuu.Location = new System.Drawing.Point(744, 26);
             this.btLuu.Name = "btLuu";
             this.btLuu.Size = new System.Drawing.Size(100, 40);
             this.btLuu.TabIndex = 7;
@@ -228,7 +231,7 @@
             this.btThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btThem.ImageIndex = 0;
             this.btThem.ImageList = this.imageList1;
-            this.btThem.Location = new System.Drawing.Point(734, 26);
+            this.btThem.Location = new System.Drawing.Point(626, 26);
             this.btThem.Name = "btThem";
             this.btThem.Size = new System.Drawing.Size(100, 40);
             this.btThem.TabIndex = 6;
@@ -240,12 +243,25 @@
             // txtTimkiem
             // 
             this.txtTimkiem.BackColor = System.Drawing.Color.LightGray;
-            this.txtTimkiem.Location = new System.Drawing.Point(437, 35);
+            this.txtTimkiem.Location = new System.Drawing.Point(329, 35);
             this.txtTimkiem.Name = "txtTimkiem";
             this.txtTimkiem.Size = new System.Drawing.Size(250, 22);
             this.txtTimkiem.TabIndex = 5;
             this.txtTimkiem.Text = "Mời nhập tên phòng ... ";
             this.txtTimkiem.Click += new System.EventHandler(this.txtTimkiem_Click);
+            // 
+            // btDS
+            // 
+            this.btDS.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btDS.ImageIndex = 5;
+            this.btDS.ImageList = this.imageList1;
+            this.btDS.Location = new System.Drawing.Point(1106, 26);
+            this.btDS.Name = "btDS";
+            this.btDS.Size = new System.Drawing.Size(125, 40);
+            this.btDS.TabIndex = 45;
+            this.btDS.Text = "Danh sách";
+            this.btDS.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btDS.UseVisualStyleBackColor = true;
             // 
             // FrmPhongBan
             // 
@@ -287,5 +303,6 @@
         private System.Windows.Forms.Button btThem;
         private System.Windows.Forms.TextBox txtTimkiem;
         private System.Windows.Forms.Button btSua;
+        private System.Windows.Forms.Button btDS;
     }
 }

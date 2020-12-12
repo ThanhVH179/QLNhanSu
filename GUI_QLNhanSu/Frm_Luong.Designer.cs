@@ -49,6 +49,7 @@
             this.btTimKiem = new System.Windows.Forms.Button();
             this.btThem = new System.Windows.Forms.Button();
             this.txtTimkiem = new System.Windows.Forms.TextBox();
+            this.btDS = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLuong)).BeginInit();
@@ -64,6 +65,7 @@
             this.imageList1.Images.SetKeyName(2, "edit.png");
             this.imageList1.Images.SetKeyName(3, "Actions-edit-delete-icon.png");
             this.imageList1.Images.SetKeyName(4, "find.png");
+            this.imageList1.Images.SetKeyName(5, "Data-List-icon.png");
             // 
             // panel1
             // 
@@ -78,7 +80,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1182, 158);
+            this.panel1.Size = new System.Drawing.Size(1301, 158);
             this.panel1.TabIndex = 30;
             // 
             // txtHeSoLuong
@@ -159,7 +161,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 158);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1182, 339);
+            this.panel2.Size = new System.Drawing.Size(1301, 339);
             this.panel2.TabIndex = 31;
             // 
             // dgvLuong
@@ -174,12 +176,13 @@
             this.dgvLuong.RowHeadersVisible = false;
             this.dgvLuong.RowHeadersWidth = 51;
             this.dgvLuong.RowTemplate.Height = 24;
-            this.dgvLuong.Size = new System.Drawing.Size(1182, 339);
+            this.dgvLuong.Size = new System.Drawing.Size(1301, 339);
             this.dgvLuong.TabIndex = 9;
             this.dgvLuong.Click += new System.EventHandler(this.dgvLuong_Click);
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.btDS);
             this.panel3.Controls.Add(this.btXoa);
             this.panel3.Controls.Add(this.btSua);
             this.panel3.Controls.Add(this.btLuu);
@@ -189,7 +192,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(0, 503);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1182, 100);
+            this.panel3.Size = new System.Drawing.Size(1301, 100);
             this.panel3.TabIndex = 32;
             // 
             // btXoa
@@ -197,7 +200,7 @@
             this.btXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btXoa.ImageIndex = 3;
             this.btXoa.ImageList = this.imageList1;
-            this.btXoa.Location = new System.Drawing.Point(1023, 36);
+            this.btXoa.Location = new System.Drawing.Point(957, 36);
             this.btXoa.Name = "btXoa";
             this.btXoa.Size = new System.Drawing.Size(100, 40);
             this.btXoa.TabIndex = 10;
@@ -211,7 +214,7 @@
             this.btSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btSua.ImageIndex = 2;
             this.btSua.ImageList = this.imageList1;
-            this.btSua.Location = new System.Drawing.Point(897, 36);
+            this.btSua.Location = new System.Drawing.Point(831, 36);
             this.btSua.Name = "btSua";
             this.btSua.Size = new System.Drawing.Size(100, 40);
             this.btSua.TabIndex = 9;
@@ -225,7 +228,7 @@
             this.btLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btLuu.ImageIndex = 1;
             this.btLuu.ImageList = this.imageList1;
-            this.btLuu.Location = new System.Drawing.Point(772, 36);
+            this.btLuu.Location = new System.Drawing.Point(706, 36);
             this.btLuu.Name = "btLuu";
             this.btLuu.Size = new System.Drawing.Size(100, 40);
             this.btLuu.TabIndex = 8;
@@ -239,7 +242,7 @@
             this.btTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btTimKiem.ImageIndex = 4;
             this.btTimKiem.ImageList = this.imageList1;
-            this.btTimKiem.Location = new System.Drawing.Point(199, 36);
+            this.btTimKiem.Location = new System.Drawing.Point(133, 36);
             this.btTimKiem.Name = "btTimKiem";
             this.btTimKiem.Size = new System.Drawing.Size(120, 40);
             this.btTimKiem.TabIndex = 5;
@@ -253,7 +256,7 @@
             this.btThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btThem.ImageIndex = 0;
             this.btThem.ImageList = this.imageList1;
-            this.btThem.Location = new System.Drawing.Point(645, 36);
+            this.btThem.Location = new System.Drawing.Point(579, 36);
             this.btThem.Name = "btThem";
             this.btThem.Size = new System.Drawing.Size(100, 40);
             this.btThem.TabIndex = 7;
@@ -265,18 +268,31 @@
             // txtTimkiem
             // 
             this.txtTimkiem.BackColor = System.Drawing.Color.LightGray;
-            this.txtTimkiem.Location = new System.Drawing.Point(334, 45);
+            this.txtTimkiem.Location = new System.Drawing.Point(268, 45);
             this.txtTimkiem.Name = "txtTimkiem";
             this.txtTimkiem.Size = new System.Drawing.Size(250, 22);
             this.txtTimkiem.TabIndex = 6;
             this.txtTimkiem.Text = "Mời nhập bậc lương...";
             this.txtTimkiem.Click += new System.EventHandler(this.txtTimkiem_Click);
             // 
+            // btDS
+            // 
+            this.btDS.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btDS.ImageIndex = 5;
+            this.btDS.ImageList = this.imageList1;
+            this.btDS.Location = new System.Drawing.Point(1083, 36);
+            this.btDS.Name = "btDS";
+            this.btDS.Size = new System.Drawing.Size(125, 40);
+            this.btDS.TabIndex = 45;
+            this.btDS.Text = "Danh sách";
+            this.btDS.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btDS.UseVisualStyleBackColor = true;
+            // 
             // FrmLuong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1182, 603);
+            this.ClientSize = new System.Drawing.Size(1301, 603);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -314,5 +330,6 @@
         private System.Windows.Forms.Button btThem;
         private System.Windows.Forms.TextBox txtTimkiem;
         private System.Windows.Forms.Button btSua;
+        private System.Windows.Forms.Button btDS;
     }
 }

@@ -43,6 +43,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvChamCong = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btDS = new System.Windows.Forms.Button();
             this.btXoa = new System.Windows.Forms.Button();
             this.btLuu = new System.Windows.Forms.Button();
             this.btThem = new System.Windows.Forms.Button();
@@ -63,6 +64,7 @@
             this.imageListButton.Images.SetKeyName(2, "edit.png");
             this.imageListButton.Images.SetKeyName(3, "Actions-edit-delete-icon.png");
             this.imageListButton.Images.SetKeyName(4, "find.png");
+            this.imageListButton.Images.SetKeyName(5, "Data-List-icon.png");
             // 
             // panel1
             // 
@@ -179,6 +181,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.btDS);
             this.panel3.Controls.Add(this.btXoa);
             this.panel3.Controls.Add(this.btLuu);
             this.panel3.Controls.Add(this.btThem);
@@ -190,12 +193,25 @@
             this.panel3.Size = new System.Drawing.Size(1382, 86);
             this.panel3.TabIndex = 31;
             // 
+            // btDS
+            // 
+            this.btDS.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btDS.ImageIndex = 5;
+            this.btDS.ImageList = this.imageListButton;
+            this.btDS.Location = new System.Drawing.Point(1036, 25);
+            this.btDS.Name = "btDS";
+            this.btDS.Size = new System.Drawing.Size(125, 40);
+            this.btDS.TabIndex = 45;
+            this.btDS.Text = "Danh sách";
+            this.btDS.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btDS.UseVisualStyleBackColor = true;
+            // 
             // btXoa
             // 
             this.btXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btXoa.ImageIndex = 3;
             this.btXoa.ImageList = this.imageListButton;
-            this.btXoa.Location = new System.Drawing.Point(1030, 34);
+            this.btXoa.Location = new System.Drawing.Point(909, 25);
             this.btXoa.Name = "btXoa";
             this.btXoa.Size = new System.Drawing.Size(100, 40);
             this.btXoa.TabIndex = 9;
@@ -209,7 +225,7 @@
             this.btLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btLuu.ImageIndex = 1;
             this.btLuu.ImageList = this.imageListButton;
-            this.btLuu.Location = new System.Drawing.Point(895, 34);
+            this.btLuu.Location = new System.Drawing.Point(786, 25);
             this.btLuu.Name = "btLuu";
             this.btLuu.Size = new System.Drawing.Size(100, 40);
             this.btLuu.TabIndex = 8;
@@ -223,7 +239,7 @@
             this.btThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btThem.ImageIndex = 0;
             this.btThem.ImageList = this.imageListButton;
-            this.btThem.Location = new System.Drawing.Point(752, 34);
+            this.btThem.Location = new System.Drawing.Point(662, 25);
             this.btThem.Name = "btThem";
             this.btThem.Size = new System.Drawing.Size(100, 40);
             this.btThem.TabIndex = 7;
@@ -237,7 +253,7 @@
             this.btTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btTimKiem.ImageIndex = 4;
             this.btTimKiem.ImageList = this.imageListButton;
-            this.btTimKiem.Location = new System.Drawing.Point(299, 34);
+            this.btTimKiem.Location = new System.Drawing.Point(209, 25);
             this.btTimKiem.Name = "btTimKiem";
             this.btTimKiem.Size = new System.Drawing.Size(120, 40);
             this.btTimKiem.TabIndex = 5;
@@ -249,7 +265,7 @@
             // txtTimkiem
             // 
             this.txtTimkiem.BackColor = System.Drawing.Color.LightGray;
-            this.txtTimkiem.Location = new System.Drawing.Point(436, 43);
+            this.txtTimkiem.Location = new System.Drawing.Point(346, 34);
             this.txtTimkiem.Name = "txtTimkiem";
             this.txtTimkiem.Size = new System.Drawing.Size(250, 22);
             this.txtTimkiem.TabIndex = 6;
@@ -297,5 +313,6 @@
         private System.Windows.Forms.TextBox txtTimkiem;
         private System.Windows.Forms.DataGridView dgvChamCong;
         private System.Windows.Forms.Button btLuu;
+        private System.Windows.Forms.Button btDS;
     }
 }

@@ -40,7 +40,7 @@ namespace DTO_QLNhanSu
             set { loaiSC = value; }
         }
 
-        public DTO_SuCo(string masc, string manv, string tensc, string thiethai, int loaisc)
+        public DTO_SuCo(string masc, string manv, string tensc, int loaisc , string thiethai)
         {
             this.maNV = manv;
             this.maSC = masc;

@@ -246,6 +246,20 @@ namespace DAL_QLNhanSu
             }
             finally { conn.Close(); }
         }
-
+        public DataTable danhSachMaNV()
+        {
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "sp_ListMaNV";
+                DataTable dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+                return dt;
+            }
+            finally { conn.Close(); }
+        }
     }
 }
