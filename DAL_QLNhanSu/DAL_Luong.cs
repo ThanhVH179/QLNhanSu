@@ -29,6 +29,24 @@ namespace DAL_QLNhanSu
                 conn.Close();
             }
         }
+        public DataTable danhSachBacLuong()
+        {
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "sp_DanhSachBacLuong";
+                DataTable dtLuong = new DataTable();
+                dtLuong.Load(cmd.ExecuteReader());
+                return dtLuong;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
 
         public bool insertLuong(DTO_Luong luong)
         {

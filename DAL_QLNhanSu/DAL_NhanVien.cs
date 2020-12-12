@@ -1,11 +1,12 @@
-﻿using System;
+﻿using DTO_QLNhanSu;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
-using DTO_QLNhanSu;
+using System.Net.Mail;
 
 namespace DAL_QLNhanSu
 {
@@ -151,12 +152,18 @@ namespace DAL_QLNhanSu
                 cmd.CommandText = "sp_InsertDataIntoNhanVien";
                 cmd.Parameters.AddWithValue("manv", nv.maNV);
                 cmd.Parameters.AddWithValue("hoten", nv.hoTen);
+                cmd.Parameters.AddWithValue("email", nv.email);
                 cmd.Parameters.AddWithValue("ngaysinh", nv.ngaySinh);
-                cmd.Parameters.AddWithValue("queQuan", nv.queQuan);
-                cmd.Parameters.AddWithValue("gioitinh", nv.gioiTinh);
+                cmd.Parameters.AddWithValue("quequan", nv.queQuan);
+                cmd.Parameters.AddWithValue("gt", nv.gioiTinh);
                 cmd.Parameters.AddWithValue("dantoc", nv.danToc);
-                cmd.Parameters.AddWithValue("chucvu", nv.chucVu);
                 cmd.Parameters.AddWithValue("sdt", nv.sDT);
+                cmd.Parameters.AddWithValue("vaitro", nv.vaiTro);
+                cmd.Parameters.AddWithValue("hinh", nv.hinh);
+                cmd.Parameters.AddWithValue("mapb", nv.maPB);
+                cmd.Parameters.AddWithValue("chucvu", nv.chucVu);
+                cmd.Parameters.AddWithValue("hocvan", nv.trinhDoHV);
+                cmd.Parameters.AddWithValue("bacluong", nv.bacLuong);
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;
             }
@@ -177,22 +184,29 @@ namespace DAL_QLNhanSu
                 cmd.CommandText = "sp_UpdateDataIntoNhanVien";
                 cmd.Parameters.AddWithValue("manv", nv.maNV);
                 cmd.Parameters.AddWithValue("hoten", nv.hoTen);
+                cmd.Parameters.AddWithValue("email", nv.email);
                 cmd.Parameters.AddWithValue("ngaysinh", nv.ngaySinh);
-                cmd.Parameters.AddWithValue("queQuan", nv.queQuan);
-                cmd.Parameters.AddWithValue("gioitinh", nv.gioiTinh);
+                cmd.Parameters.AddWithValue("quequan", nv.queQuan);
+                cmd.Parameters.AddWithValue("gt", nv.gioiTinh);
                 cmd.Parameters.AddWithValue("dantoc", nv.danToc);
-                cmd.Parameters.AddWithValue("chucvu", nv.chucVu);
                 cmd.Parameters.AddWithValue("sdt", nv.sDT);
+                cmd.Parameters.AddWithValue("vaitro", nv.vaiTro);
+                cmd.Parameters.AddWithValue("hinh", nv.hinh);
+                cmd.Parameters.AddWithValue("mapb", nv.maPB);
+                cmd.Parameters.AddWithValue("chucvu", nv.chucVu);
+                cmd.Parameters.AddWithValue("hocvan", nv.trinhDoHV);
+                cmd.Parameters.AddWithValue("bacluong", nv.bacLuong);
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Console.WriteLine(ex.Message);
             }
             finally { conn.Close(); }
             return false;
         }
-        public bool deleteNhanVien(string hoten)
+        public bool deleteNhanVien(string manv)
         {
             try
             {
@@ -200,8 +214,8 @@ namespace DAL_QLNhanSu
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conn;
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "sp_DeleteDataNhanVien";
-                cmd.Parameters.AddWithValue("hoTen", hoten);
+                cmd.CommandText = "sp_DeleteDataFromNhanVien";
+                cmd.Parameters.AddWithValue("manv", manv);
                 if (cmd.ExecuteNonQuery() > 0)
                 {
                     return true;
@@ -232,5 +246,6 @@ namespace DAL_QLNhanSu
             }
             finally { conn.Close(); }
         }
+
     }
 }

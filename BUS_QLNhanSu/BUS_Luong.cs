@@ -17,6 +17,10 @@ namespace BUS_QLNhanSu
         {
             return dalLuong.getLuong();
         }
+        public DataTable DanhSachBacLuong()
+        {
+            return dalLuong.danhSachBacLuong();
+        }
         public bool insertLuong(DTO_Luong luong)
         {
             return dalLuong.insertLuong(luong);

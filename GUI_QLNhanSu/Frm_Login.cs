@@ -32,8 +32,6 @@ namespace GUI_QLNhanSu
             if (busNhanVien.NhanVienDangNhap(nv))
             {
                 FrmMain.mail = nv.Email;
-                DataTable dt = busNhanVien.VaiTroNV(nv.Email);
-                vaiTro = dt.Rows[0][0].ToString();
                 MessageBox.Show("Thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 FrmMain.session = 1;
                 this.Close();

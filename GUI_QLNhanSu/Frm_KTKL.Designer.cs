@@ -43,10 +43,12 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.btXoa = new System.Windows.Forms.Button();
             this.btSua = new System.Windows.Forms.Button();
+            this.btLuu = new System.Windows.Forms.Button();
             this.btThem = new System.Windows.Forms.Button();
             this.btTimKiem = new System.Windows.Forms.Button();
             this.txtTimkiem = new System.Windows.Forms.TextBox();
-            this.btLuu = new System.Windows.Forms.Button();
+            this.lblMaKTKL = new System.Windows.Forms.Label();
+            this.txtMaKTKL = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -69,7 +71,9 @@
             this.panel1.Controls.Add(this.lblMota);
             this.panel1.Controls.Add(this.cmbLoai);
             this.panel1.Controls.Add(this.lblLoai);
+            this.panel1.Controls.Add(this.txtMaKTKL);
             this.panel1.Controls.Add(this.txtMaNV);
+            this.panel1.Controls.Add(this.lblMaKTKL);
             this.panel1.Controls.Add(this.lblMaNV);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -79,7 +83,7 @@
             // 
             // txtMoTa
             // 
-            this.txtMoTa.Location = new System.Drawing.Point(422, 74);
+            this.txtMoTa.Location = new System.Drawing.Point(778, 71);
             this.txtMoTa.Multiline = true;
             this.txtMoTa.Name = "txtMoTa";
             this.txtMoTa.Size = new System.Drawing.Size(250, 60);
@@ -89,7 +93,7 @@
             // 
             this.lblMota.AutoSize = true;
             this.lblMota.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMota.Location = new System.Drawing.Point(337, 89);
+            this.lblMota.Location = new System.Drawing.Point(707, 89);
             this.lblMota.Name = "lblMota";
             this.lblMota.Size = new System.Drawing.Size(50, 18);
             this.lblMota.TabIndex = 19;
@@ -115,7 +119,7 @@
             // 
             // txtMaNV
             // 
-            this.txtMaNV.Location = new System.Drawing.Point(422, 23);
+            this.txtMaNV.Location = new System.Drawing.Point(422, 71);
             this.txtMaNV.Name = "txtMaNV";
             this.txtMaNV.Size = new System.Drawing.Size(180, 22);
             this.txtMaNV.TabIndex = 16;
@@ -124,7 +128,7 @@
             // 
             this.lblMaNV.AutoSize = true;
             this.lblMaNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMaNV.Location = new System.Drawing.Point(337, 23);
+            this.lblMaNV.Location = new System.Drawing.Point(337, 71);
             this.lblMaNV.Name = "lblMaNV";
             this.lblMaNV.Size = new System.Drawing.Size(57, 18);
             this.lblMaNV.TabIndex = 15;
@@ -190,6 +194,19 @@
             this.btSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btSua.UseVisualStyleBackColor = true;
             // 
+            // btLuu
+            // 
+            this.btLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btLuu.ImageIndex = 1;
+            this.btLuu.ImageList = this.imageList1;
+            this.btLuu.Location = new System.Drawing.Point(816, 35);
+            this.btLuu.Name = "btLuu";
+            this.btLuu.Size = new System.Drawing.Size(100, 40);
+            this.btLuu.TabIndex = 39;
+            this.btLuu.Text = "Lưu";
+            this.btLuu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btLuu.UseVisualStyleBackColor = true;
+            // 
             // btThem
             // 
             this.btThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -223,18 +240,22 @@
             this.txtTimkiem.Size = new System.Drawing.Size(250, 22);
             this.txtTimkiem.TabIndex = 37;
             // 
-            // btLuu
+            // lblMaKTKL
             // 
-            this.btLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btLuu.ImageIndex = 1;
-            this.btLuu.ImageList = this.imageList1;
-            this.btLuu.Location = new System.Drawing.Point(816, 35);
-            this.btLuu.Name = "btLuu";
-            this.btLuu.Size = new System.Drawing.Size(100, 40);
-            this.btLuu.TabIndex = 39;
-            this.btLuu.Text = "Lưu";
-            this.btLuu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btLuu.UseVisualStyleBackColor = true;
+            this.lblMaKTKL.AutoSize = true;
+            this.lblMaKTKL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaKTKL.Location = new System.Drawing.Point(337, 22);
+            this.lblMaKTKL.Name = "lblMaKTKL";
+            this.lblMaKTKL.Size = new System.Drawing.Size(74, 18);
+            this.lblMaKTKL.TabIndex = 15;
+            this.lblMaKTKL.Text = "Mã KTKL:";
+            // 
+            // txtMaKTKL
+            // 
+            this.txtMaKTKL.Location = new System.Drawing.Point(422, 23);
+            this.txtMaKTKL.Name = "txtMaKTKL";
+            this.txtMaKTKL.Size = new System.Drawing.Size(180, 22);
+            this.txtMaKTKL.TabIndex = 16;
             // 
             // FrmKTKL
             // 
@@ -275,5 +296,7 @@
         private System.Windows.Forms.Button btTimKiem;
         private System.Windows.Forms.TextBox txtTimkiem;
         private System.Windows.Forms.Button btLuu;
+        private System.Windows.Forms.TextBox txtMaKTKL;
+        private System.Windows.Forms.Label lblMaKTKL;
     }
 }

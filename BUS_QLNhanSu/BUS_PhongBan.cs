@@ -17,6 +17,10 @@ namespace BUS_QLNhanSu
         {
             return dalPhongBan.getPhongBan();
         }
+        public DataTable DanhSachMaPhong()
+        {
+            return dalPhongBan.danhSachMaPhong();
+        }
         public bool insertPhongBan(DTO_PhongBan phongBan)
         {
             return dalPhongBan.insertPhongBan(phongBan);

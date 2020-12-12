@@ -29,6 +29,24 @@ namespace DAL_QLNhanSu
                 conn.Close();
             }
         }
+        public DataTable danhSachMaPhong()
+        {
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "sp_DanhSachMaPhong";
+                DataTable dtPhongBan = new DataTable();
+                dtPhongBan.Load(cmd.ExecuteReader());
+                return dtPhongBan;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
         public bool insertPhongBan(DTO_PhongBan phongBan)
         {
             try
