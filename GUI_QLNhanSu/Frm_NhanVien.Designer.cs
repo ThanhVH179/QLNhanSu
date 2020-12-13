@@ -195,6 +195,8 @@
             this.cmbChucVu.Items.AddRange(new object[] {
             "Nhân viên",
             "Quàn lý",
+            "Kế toán",
+            "Thư ký",
             "Bảo vệ",
             "Lao công"});
             this.cmbChucVu.Location = new System.Drawing.Point(287, 144);

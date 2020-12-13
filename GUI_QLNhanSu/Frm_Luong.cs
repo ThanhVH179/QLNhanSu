@@ -18,6 +18,7 @@ namespace GUI_QLNhanSu
         {
             InitializeComponent();
         }
+        public static string vaitro;
         BUS_Luong busLuong = new BUS_Luong();
         void OpenTextbox()
         {
@@ -54,6 +55,13 @@ namespace GUI_QLNhanSu
         }
         private void FrmLuong_Load(object sender, EventArgs e)
         {
+            if (int.Parse(vaitro) == 1)
+            {
+                btThem.Visible = false;
+                btLuu.Visible = false;
+                btXoa.Visible = false;
+                btSua.Visible = false;
+            }
             LoadGridView_Luong();
             CloseTextbox();
             txtTimkiem.Text = "Mời nhập bậc lương...";

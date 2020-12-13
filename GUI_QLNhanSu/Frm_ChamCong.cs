@@ -18,6 +18,7 @@ namespace GUI_QLNhanSu
         {
             InitializeComponent();
         }
+        public static string vaitro;
         Bus_ChamCong busChamCong = new Bus_ChamCong();
         BUS_NhanVien busnv = new BUS_NhanVien();
         void CloseTextbox()
@@ -52,6 +53,12 @@ namespace GUI_QLNhanSu
 
         private void FrmChamCong_Load(object sender, EventArgs e)
         {
+            if (int.Parse(vaitro) == 1)
+            {
+                btThem.Visible = false;
+                btLuu.Visible = false;
+                btXoa.Visible = false;
+            }
             cmbMaNV.DataSource = busnv.DanhSachMaNV();
             cmbMaNV.ValueMember = "manv";
             LoadGridView_ChamCong();

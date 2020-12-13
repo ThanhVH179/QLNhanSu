@@ -18,6 +18,7 @@ namespace GUI_QLNhanSu
         {
             InitializeComponent();
         }
+        public static string vaitro;
         BUS_KTKL busKTKL = new BUS_KTKL();
         BUS_NhanVien busnv = new BUS_NhanVien();
         void OpenTextbox()
@@ -55,6 +56,13 @@ namespace GUI_QLNhanSu
         }
         private void FrmKTKL_Load(object sender, EventArgs e)
         {
+            if (int.Parse(vaitro) == 1)
+            {
+                btThem.Visible = false;
+                btLuu.Visible = false;
+                btXoa.Visible = false;
+                btSua.Visible = false;
+            }
             cmbMaNV.DataSource = busnv.DanhSachMaNV();
             cmbMaNV.ValueMember = "manv";
             LoadGridView_KTKL();

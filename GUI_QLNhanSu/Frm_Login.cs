@@ -32,6 +32,15 @@ namespace GUI_QLNhanSu
             if (busNhanVien.NhanVienDangNhap(nv))
             {
                 FrmMain.mail = nv.Email;
+                DataTable dt = busNhanVien.VaiTroNV(nv.Email);
+                vaiTro = dt.Rows[0][0].ToString();
+                FrmChamCong.vaitro = vaiTro;
+                FrmHopDong.vaitro = vaiTro;
+                FrmKTKL.vaitro = vaiTro;
+                FrmLuong.vaitro = vaiTro;
+                FrmNhanVien.vaitro = vaiTro;
+                FrmPhongBan.vaitro = vaiTro;
+                FrmSuCo.vaitro = vaiTro;
                 MessageBox.Show("Thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 FrmMain.session = 1;
                 this.Close();
@@ -119,6 +128,30 @@ namespace GUI_QLNhanSu
             this.Close();
         }
 
-        
+        private void btQuenMatKhau_Click(object sender, EventArgs e)
+        {
+            if (txtTaiKhoan.Text != "")
+            {
+                if (busNhanVien.NhanVienQuenMatKhau(txtTaiKhoan.Text))
+                {
+                    StringBuilder builder = new StringBuilder();
+                    builder.Append(RandomString(4, true));
+                    builder.Append(RandomNumber(1000, 9999));
+                    builder.Append(RandomString(2, false));
+                    string matkhaumoi = busNhanVien.encryption(builder.ToString());
+                    busNhanVien.TaoMatKhau(txtTaiKhoan.Text, matkhaumoi);
+                    SendMail(txtTaiKhoan.Text, builder.ToString());
+                }
+                else
+                {
+                    MessageBox.Show("Email không tồn tại, vui lòng kiểm tra lại email", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Bạn cần nhập email để nhận thông tin khôi phục", "Thông báo");
+                txtTaiKhoan.Focus();
+            }
+        }
     }
 }

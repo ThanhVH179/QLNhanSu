@@ -119,5 +119,22 @@ namespace DTO_QLNhanSu
             this.trinhDoHV = trinhdoHV;
             this.bacLuong = bacluong;
         }
+        public DTO_NhanVien(string manv, string hoten, DateTime ngaysinh, string quequan, int gioitinh, string dantoc,
+                            string sdt, int vaitro, string hinh, string maPB, string chucvu, string trinhdoHV, string bacluong)
+        {
+            this.maNV = manv;
+            this.hoTen = hoten;
+            this.ngaySinh = ngaysinh;
+            this.queQuan = quequan;
+            this.gioiTinh = gioitinh;
+            this.danToc = dantoc;
+            this.sDT = sdt;
+            this.vaiTro = vaitro;
+            this.hinh = hinh;
+            this.maPB = maPB;
+            this.chucVu = chucvu;
+            this.trinhDoHV = trinhdoHV;
+            this.bacLuong = bacluong;
+        }
     }
 }

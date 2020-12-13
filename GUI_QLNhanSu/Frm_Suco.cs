@@ -18,6 +18,7 @@ namespace GUI_QLNhanSu
         {
             InitializeComponent();
         }
+        public static string vaitro;
         BUS_SuCo busSuCo = new BUS_SuCo();
         BUS_NhanVien busnv = new BUS_NhanVien();
 
@@ -61,6 +62,13 @@ namespace GUI_QLNhanSu
 
         private void FrmSuCo_Load(object sender, EventArgs e)
         {
+            if (int.Parse(vaitro) == 1)
+            {
+                btThem.Visible = false;
+                btLuu.Visible = false;
+                btXoa.Visible = false;
+                btSua.Visible = false;
+            }
             cmbMaNV.DataSource = busnv.DanhSachMaNV();
             cmbMaNV.ValueMember = "manv";
             LoadGridView_SuCo();

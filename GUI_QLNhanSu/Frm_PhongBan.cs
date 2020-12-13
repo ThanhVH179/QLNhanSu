@@ -18,6 +18,7 @@ namespace GUI_QLNhanSu
         {
             InitializeComponent();
         }
+        public static string vaitro;
         BUS_PhongBan busPhongBan = new BUS_PhongBan();
         void OpenTextbox()
         {
@@ -55,6 +56,13 @@ namespace GUI_QLNhanSu
         }
         private void FrmPhongBan_Load(object sender, EventArgs e)
         {
+            if (int.Parse(vaitro) == 1)
+            {
+                btThem.Visible = false;
+                btLuu.Visible = false;
+                btXoa.Visible = false;
+                btSua.Visible = false;
+            }
             LoadGridView_Phong();
             CloseTextbox();
             txtTimkiem.Text = "Mời nhập ...";

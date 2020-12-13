@@ -18,6 +18,7 @@ namespace GUI_QLNhanSu
         {
             InitializeComponent();
         }
+        public static string vaitro;
         BUS_HopDong busHopDong = new BUS_HopDong();
         BUS_NhanVien busnv = new BUS_NhanVien();
         void OpenTextbox()
@@ -55,6 +56,11 @@ namespace GUI_QLNhanSu
         }
         private void FrmHopDong_Load(object sender, EventArgs e)
         {
+            if (int.Parse(vaitro) == 1)
+            {
+                btThem.Visible = false;
+                btLuu.Visible = false;
+            }
             cmbMaNV.DataSource = busnv.DanhSachMaNV();
             cmbMaNV.ValueMember = "manv";
             LoadGridView_HopDong();

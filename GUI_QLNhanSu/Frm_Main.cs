@@ -7,13 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace GUI_QLNhanSu
 {
     public partial class FrmMain : Form
     {
         public static string mail;
-        public static int session = 0;
+        public static int session = 0; 
         public FrmMain()
         {
             InitializeComponent();
@@ -21,6 +22,30 @@ namespace GUI_QLNhanSu
         private void FrmMain_Load(object sender, EventArgs e)
         {
             ResetValues();
+        }
+        private bool CheckExistForm(string name)
+        {
+            bool check = false;
+            foreach (Form frm in this.MdiChildren)
+            {
+                if (frm.Name == name)
+                {
+                    check = true;
+                    break;
+                }
+            }
+            return check;
+        }
+        private void ActiveChildForm(string name)
+        {
+            foreach (Form frm in this.MdiChildren)
+            {
+                if (frm.Name == name)
+                {
+                    frm.Activate();
+                    break;
+                }
+            }
         }
 
         private void ResetValues()
@@ -58,9 +83,16 @@ namespace GUI_QLNhanSu
         private void DangNhapToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmDangNhap Fdn = new FrmDangNhap();
-            Fdn.MdiParent = this;
-            Fdn.Show();
-            Fdn.FormClosed += new FormClosedEventHandler(FrmLogin_Closed);
+            if (!CheckExistForm("FrmDangNhap"))
+            {
+                Fdn.MdiParent = this;
+                Fdn.Show();
+                Fdn.FormClosed += new FormClosedEventHandler(FrmLogin_Closed);
+            }
+            else
+            {
+                ActiveChildForm("FrmDangNhap");
+            }           
         }
 
         void FrmClosed(object sender, FormClosedEventArgs e)
@@ -173,9 +205,16 @@ namespace GUI_QLNhanSu
         private void DoiMatKhauToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmDoiMK Fdmk = new FrmDoiMK(FrmMain.mail);
-            Fdmk.MdiParent = this;
-            Fdmk.Show();
-            Fdmk.FormClosed += new FormClosedEventHandler(FrmDoiMK_Closed);
+            if (!CheckExistForm("FrmDoiMK"))
+            {
+                Fdmk.MdiParent = this;
+                Fdmk.Show();
+                Fdmk.FormClosed += new FormClosedEventHandler(FrmDoiMK_Closed);
+            }
+            else
+            {
+                ActiveChildForm("FrmDoiMK");
+            }
         }
 
         private void DangXuatToolStripMenuItem_Click(object sender, EventArgs e)
@@ -185,6 +224,19 @@ namespace GUI_QLNhanSu
             ResetValues();
             panel1.Controls.Clear();
             panel1.Visible = false;
+        }
+
+        private void HuongDanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var path = Path.Combine(Directory.GetCurrentDirectory(), "HuongDan.pdf");
+                System.Diagnostics.Process.Start(path);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("The file is not found");
+            }
         }
     }
     } 

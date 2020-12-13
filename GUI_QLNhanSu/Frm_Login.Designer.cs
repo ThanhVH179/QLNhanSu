@@ -106,6 +106,7 @@
             this.btQuenMatKhau.TabIndex = 4;
             this.btQuenMatKhau.Text = "Quên mật khẩu";
             this.btQuenMatKhau.UseVisualStyleBackColor = true;
+            this.btQuenMatKhau.Click += new System.EventHandler(this.btQuenMatKhau_Click);
             // 
             // FrmDangNhap
             // 

@@ -78,7 +78,7 @@
             // DangNhapToolStripMenuItem
             // 
             this.DangNhapToolStripMenuItem.Name = "DangNhapToolStripMenuItem";
-            this.DangNhapToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.DangNhapToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.DangNhapToolStripMenuItem.Text = "Đăng nhập ";
             this.DangNhapToolStripMenuItem.Click += new System.EventHandler(this.DangNhapToolStripMenuItem_Click);
             // 
@@ -86,7 +86,7 @@
             // 
             this.DangXuatToolStripMenuItem.Enabled = false;
             this.DangXuatToolStripMenuItem.Name = "DangXuatToolStripMenuItem";
-            this.DangXuatToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.DangXuatToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.DangXuatToolStripMenuItem.Text = "Đăng xuất";
             this.DangXuatToolStripMenuItem.Click += new System.EventHandler(this.DangXuatToolStripMenuItem_Click);
             // 
@@ -94,14 +94,14 @@
             // 
             this.DoiMatKhauToolStripMenuItem.Enabled = false;
             this.DoiMatKhauToolStripMenuItem.Name = "DoiMatKhauToolStripMenuItem";
-            this.DoiMatKhauToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.DoiMatKhauToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.DoiMatKhauToolStripMenuItem.Text = "Đồi mật khẩu";
             this.DoiMatKhauToolStripMenuItem.Click += new System.EventHandler(this.DoiMatKhauToolStripMenuItem_Click);
             // 
             // ThoatToolStripMenuItem
             // 
             this.ThoatToolStripMenuItem.Name = "ThoatToolStripMenuItem";
-            this.ThoatToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.ThoatToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.ThoatToolStripMenuItem.Text = "Thoát";
             this.ThoatToolStripMenuItem.Click += new System.EventHandler(this.ThoatToolStripMenuItem_Click);
             // 
@@ -182,6 +182,7 @@
             this.HuongDanToolStripMenuItem.Name = "HuongDanToolStripMenuItem";
             this.HuongDanToolStripMenuItem.Size = new System.Drawing.Size(98, 24);
             this.HuongDanToolStripMenuItem.Text = "Hướng dẫn";
+            this.HuongDanToolStripMenuItem.Click += new System.EventHandler(this.HuongDanToolStripMenuItem_Click);
             // 
             // thongTinNVMenuItem
             // 

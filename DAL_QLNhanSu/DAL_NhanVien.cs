@@ -184,7 +184,6 @@ namespace DAL_QLNhanSu
                 cmd.CommandText = "sp_UpdateDataIntoNhanVien";
                 cmd.Parameters.AddWithValue("manv", nv.maNV);
                 cmd.Parameters.AddWithValue("hoten", nv.hoTen);
-                cmd.Parameters.AddWithValue("email", nv.email);
                 cmd.Parameters.AddWithValue("ngaysinh", nv.ngaySinh);
                 cmd.Parameters.AddWithValue("quequan", nv.queQuan);
                 cmd.Parameters.AddWithValue("gt", nv.gioiTinh);
@@ -199,9 +198,8 @@ namespace DAL_QLNhanSu
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                Console.WriteLine(ex.Message);
             }
             finally { conn.Close(); }
             return false;

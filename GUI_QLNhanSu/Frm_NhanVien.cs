@@ -21,6 +21,7 @@ namespace GUI_QLNhanSu
         {
             InitializeComponent();
         }
+        public static string vaitro;
         string checkUrlImage;
         string fileName;
         string fileSavePath;
@@ -88,6 +89,7 @@ namespace GUI_QLNhanSu
             cmbChucVu.Text = null;
             cmbGT.Text = null;
             pbHinh.Image = null;
+            btHinh.Enabled = true;
         }
         void CloseTextbox()
         {
@@ -121,6 +123,7 @@ namespace GUI_QLNhanSu
             cmbGT.Text = null;
             btLuu.Enabled = false;
             btSua.Enabled = false;
+            btHinh.Enabled = false;
         }
 
         void LoadGridView_NV()
@@ -144,6 +147,13 @@ namespace GUI_QLNhanSu
 
         private void FrmNhanVien_Load(object sender, EventArgs e)
         {
+            if (int.Parse(vaitro) == 1)
+            {
+                btThem.Visible = false;
+                btLuu.Visible = false;
+                btXoa.Visible = false;
+                btSua.Visible = false;
+            }
             txtTimKiem.Text = "Mời nhập tên nv ...";
             txtTimKiem.BackColor = Color.LightGray;
             LoadGridView_NV();
@@ -178,13 +188,13 @@ namespace GUI_QLNhanSu
         {
             if (txtMaNV.Text != "" && txtTen.Text != "" && txtQueQuan.Text != "" && cmbGT.Text != "" && txtDanToc.Text != "" && txtSDT.Text != "" && cmbChucVu.Text != "" && txtEmail.Text != "" && cmbVaiTro.Text != "" && cmbMaPB.Text != "" && cmbBacLuong.Text != "" && txtTDHV.Text != "" && txtHinh.Text != "")
             {
-                DTO_NhanVien nv = new DTO_NhanVien(txtMaNV.Text, txtTen.Text, txtEmail.Text, dtpNgaySinh.Value, txtQueQuan.Text, cmbGT.SelectedIndex, txtDanToc.Text, txtSDT.Text, cmbVaiTro.SelectedIndex, txtHinh.Text, cmbMaPB.Text, cmbChucVu.Text, txtTDHV.Text, cmbBacLuong.Text);
+                DTO_NhanVien nv = new DTO_NhanVien(txtMaNV.Text, txtTen.Text, txtEmail.Text, dtpNgaySinh.Value, txtQueQuan.Text, cmbGT.SelectedIndex, txtDanToc.Text, txtSDT.Text, cmbVaiTro.SelectedIndex, "\\Images\\" + fileName, cmbMaPB.Text, cmbChucVu.Text, txtTDHV.Text, cmbBacLuong.Text);
                 if (busNhanVien.InsertNhanVien(nv))
                 {
                     MessageBox.Show("Thêm thành công");
                     File.Copy(fileAddress, fileSavePath, true);
                     LoadGridView_NV();
-                    SendMail(nv.Email);
+                    //SendMail(nv.Email);
                 }
                 else
                 {
@@ -201,7 +211,7 @@ namespace GUI_QLNhanSu
         {
             if (txtMaNV.Text != "" && txtTen.Text != "" && txtQueQuan.Text != "" && cmbGT.Text != "" && txtDanToc.Text != "" && txtSDT.Text != "" && cmbChucVu.Text != "" && txtEmail.Text != "" && cmbVaiTro.Text != "" && cmbMaPB.Text != "" && cmbBacLuong.Text != "" && txtTDHV.Text != "" && txtHinh.Text != "")
             {
-                DTO_NhanVien nv = new DTO_NhanVien(txtMaNV.Text, txtTen.Text, txtEmail.Text, dtpNgaySinh.Value, txtQueQuan.Text, cmbGT.SelectedIndex, txtDanToc.Text, txtSDT.Text, cmbVaiTro.SelectedIndex, txtHinh.Text, cmbMaPB.Text, cmbChucVu.Text, txtTDHV.Text, cmbBacLuong.Text) ;
+                DTO_NhanVien nv = new DTO_NhanVien(txtMaNV.Text, txtTen.Text, dtpNgaySinh.Value, txtQueQuan.Text, cmbGT.SelectedIndex, txtDanToc.Text, txtSDT.Text, cmbVaiTro.SelectedIndex, txtHinh.Text, cmbMaPB.Text, cmbChucVu.Text, txtTDHV.Text, cmbBacLuong.Text) ;
                 if (MessageBox.Show("Bạn có chắc muốn sửa", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     if (busNhanVien.UpdateNhanVien(nv))
@@ -230,7 +240,9 @@ namespace GUI_QLNhanSu
             string saveDirectory = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10));
             if (dgvNhanVien.Rows.Count > 0)
             {
+                btHinh.Enabled = true;
                 txtMaNV.Enabled = false;
+                txtEmail.Enabled = false;
                 txtTen.Enabled = true;
                 dtpNgaySinh.Enabled = true;
                 txtQueQuan.Enabled = true;
@@ -238,7 +250,6 @@ namespace GUI_QLNhanSu
                 txtDanToc.Enabled = true;
                 txtSDT.Enabled = true;
                 cmbChucVu.Enabled = true;
-                txtEmail.Enabled = true;
                 cmbVaiTro.Enabled = true;
                 cmbMaPB.Enabled = true;
                 cmbBacLuong.Enabled = true;
@@ -272,7 +283,7 @@ namespace GUI_QLNhanSu
                 cmbBacLuong.Text = dgvNhanVien.CurrentRow.Cells[12].Value.ToString();
                 txtHinh.Text = dgvNhanVien.CurrentRow.Cells[13].Value.ToString();
                 checkUrlImage = txtHinh.Text;
-                pbHinh.Image = Image.FromFile(saveDirectory + dgvNhanVien.CurrentRow.Cells[13].Value.ToString());
+                pbHinh.Image = Image.FromFile(saveDirectory + dgvNhanVien.CurrentRow.Cells["Hinh"].Value.ToString());
             }
         }
 
