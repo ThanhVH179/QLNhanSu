@@ -40,6 +40,8 @@ namespace GUI_QLNhanSu
             txtHeSoLuong.Text = null;
             txtHeSoPhuCap.Text = null;
             txtLuongCoBan.Text = null;
+            btSua.Enabled = false;
+            btLuu.Enabled = false;
         }
         void LoadGridView_Luong()
         {
@@ -61,6 +63,8 @@ namespace GUI_QLNhanSu
         private void btThem_Click(object sender, EventArgs e)
         {
             OpenTextbox();
+            btLuu.Enabled = true;
+            btSua.Enabled = false;
         }
 
         private void btLuu_Click(object sender, EventArgs e)
@@ -109,6 +113,8 @@ namespace GUI_QLNhanSu
 
         private void dgvLuong_Click(object sender, EventArgs e)
         {
+            btSua.Enabled = true;
+            btLuu.Enabled = false;
             txtBacLuong.Enabled = false;
             txtHeSoLuong.Enabled = true;
             txtHeSoPhuCap.Enabled = true;
@@ -215,6 +221,12 @@ namespace GUI_QLNhanSu
             }
             txtTimkiem.Text = "Mời nhập bậc lương ...";
             txtTimkiem.BackColor = Color.LightGray;
+        }
+
+        private void btDS_Click(object sender, EventArgs e)
+        {
+            LoadGridView_Luong();
+            CloseTextbox();
         }
     }
 }

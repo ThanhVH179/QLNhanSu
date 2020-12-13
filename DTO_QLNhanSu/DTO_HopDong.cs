@@ -9,7 +9,7 @@ namespace DTO_QLNhanSu
     public class DTO_HopDong
     {
         public string maHD;
-        public string loaiHD;
+        public int loaiHD;
         public string maNV;
         public DateTime ngayKy;
         public DateTime ngayKetThuc;
@@ -19,7 +19,7 @@ namespace DTO_QLNhanSu
             get { return maHD; }
             set { maHD = value; }
         }
-        public string LoaiHD
+        public int LoaiHD
         {
             get { return loaiHD; }
             set { loaiHD = value; }
@@ -40,7 +40,7 @@ namespace DTO_QLNhanSu
             set { ngayKetThuc = value; }
         }
 
-        public DTO_HopDong(string mahd, string loaihd, string manv, DateTime ngayky, DateTime ngayketthuc)
+        public DTO_HopDong(string mahd, int loaihd, string manv, DateTime ngayky, DateTime ngayketthuc)
         {
             this.maHD = mahd;
             this.loaiHD = loaihd;

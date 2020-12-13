@@ -260,6 +260,7 @@
             // 
             // btSua
             // 
+            this.btSua.Enabled = false;
             this.btSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btSua.ImageIndex = 2;
             this.btSua.ImageList = this.imageList1;
@@ -274,6 +275,7 @@
             // 
             // btLuu
             // 
+            this.btLuu.Enabled = false;
             this.btLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btLuu.ImageIndex = 1;
             this.btLuu.ImageList = this.imageList1;

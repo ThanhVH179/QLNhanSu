@@ -37,13 +37,12 @@ namespace DAL_QLNhanSu
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conn;
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "sp_InsertDataHopDong";
+                cmd.CommandText = "sp_InsertDataIntoHopDong";
                 cmd.Parameters.AddWithValue("maHD", hopDong.maHD);
                 cmd.Parameters.AddWithValue("loaiHD", hopDong.loaiHD);
                 cmd.Parameters.AddWithValue("ngayKi", hopDong.ngayKy);
-                cmd.Parameters.AddWithValue("maNV", hopDong.maNV);
                 cmd.Parameters.AddWithValue("ngayKet", hopDong.ngayKetThuc);
-
+                cmd.Parameters.AddWithValue("maNV", hopDong.maNV);
                 if (cmd.ExecuteNonQuery() > 0)
                 {
                     return true;

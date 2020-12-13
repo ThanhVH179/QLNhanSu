@@ -36,10 +36,14 @@ namespace GUI_QLNhanSu
             txtMaPB.Text = null;
             txtTenPB.Text = null;
             txtTruongPhong.Text = null;
+            btLuu.Enabled = false;
+            btSua.Enabled = false;
         }
         private void btThem_Click(object sender, EventArgs e)
         {
             OpenTextbox();
+            btLuu.Enabled = true;
+            btSua.Enabled = false;
         }
          
         void LoadGridView_Phong()
@@ -105,6 +109,8 @@ namespace GUI_QLNhanSu
 
         private void dgvPhongBan_Click(object sender, EventArgs e)
         {
+            btLuu.Enabled = false;
+            btSua.Enabled = true;
             txtMaPB.Enabled = false;
             txtTenPB.Enabled = true;
             txtTruongPhong.Enabled = true;
@@ -162,6 +168,12 @@ namespace GUI_QLNhanSu
             }
             txtTimkiem.Text = "Mời nhập tên phòng ...";
             txtTimkiem.BackColor = Color.LightGray;
+        }
+
+        private void btDS_Click(object sender, EventArgs e)
+        {
+            LoadGridView_Phong();
+            CloseTextbox();
         }
     }
 }

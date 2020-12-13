@@ -42,7 +42,7 @@ namespace DAL_QLNhanSu
                 cmd.Parameters.AddWithValue("maCC", chamcong.maCC);
                 cmd.Parameters.AddWithValue("maNV", chamcong.maNV);
                 cmd.Parameters.AddWithValue("thoiGian", chamcong.thoiGian);
-                cmd.Parameters.AddWithValue("chuThich", chamcong.thoiGian);
+                cmd.Parameters.AddWithValue("chuThich", chamcong.chuThich);
                 if (cmd.ExecuteNonQuery() > 0)
                 {
                     return true;

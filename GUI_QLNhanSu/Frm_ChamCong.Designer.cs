@@ -33,9 +33,7 @@
             this.imageListButton = new System.Windows.Forms.ImageList(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.dTPThoigian = new System.Windows.Forms.DateTimePicker();
-            this.txtChuthich = new System.Windows.Forms.TextBox();
             this.txtMaCC = new System.Windows.Forms.TextBox();
-            this.txtMaNV = new System.Windows.Forms.TextBox();
             this.lblMaNV = new System.Windows.Forms.Label();
             this.lblChuthich = new System.Windows.Forms.Label();
             this.lblThoiGian = new System.Windows.Forms.Label();
@@ -49,6 +47,8 @@
             this.btThem = new System.Windows.Forms.Button();
             this.btTimKiem = new System.Windows.Forms.Button();
             this.txtTimkiem = new System.Windows.Forms.TextBox();
+            this.cmbMaNV = new System.Windows.Forms.ComboBox();
+            this.txtChuthich = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChamCong)).BeginInit();
@@ -68,10 +68,10 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.cmbMaNV);
             this.panel1.Controls.Add(this.dTPThoigian);
             this.panel1.Controls.Add(this.txtChuthich);
             this.panel1.Controls.Add(this.txtMaCC);
-            this.panel1.Controls.Add(this.txtMaNV);
             this.panel1.Controls.Add(this.lblMaNV);
             this.panel1.Controls.Add(this.lblChuthich);
             this.panel1.Controls.Add(this.lblThoiGian);
@@ -92,27 +92,12 @@
             this.dTPThoigian.Size = new System.Drawing.Size(145, 27);
             this.dTPThoigian.TabIndex = 3;
             // 
-            // txtChuthich
-            // 
-            this.txtChuthich.Location = new System.Drawing.Point(679, 33);
-            this.txtChuthich.Multiline = true;
-            this.txtChuthich.Name = "txtChuthich";
-            this.txtChuthich.Size = new System.Drawing.Size(240, 80);
-            this.txtChuthich.TabIndex = 4;
-            // 
             // txtMaCC
             // 
             this.txtMaCC.Location = new System.Drawing.Point(306, 31);
             this.txtMaCC.Name = "txtMaCC";
             this.txtMaCC.Size = new System.Drawing.Size(220, 22);
             this.txtMaCC.TabIndex = 1;
-            // 
-            // txtMaNV
-            // 
-            this.txtMaNV.Location = new System.Drawing.Point(306, 67);
-            this.txtMaNV.Name = "txtMaNV";
-            this.txtMaNV.Size = new System.Drawing.Size(220, 22);
-            this.txtMaNV.TabIndex = 2;
             // 
             // lblMaNV
             // 
@@ -205,6 +190,7 @@
             this.btDS.Text = "Danh sách";
             this.btDS.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btDS.UseVisualStyleBackColor = true;
+            this.btDS.Click += new System.EventHandler(this.btDS_Click);
             // 
             // btXoa
             // 
@@ -222,6 +208,7 @@
             // 
             // btLuu
             // 
+            this.btLuu.Enabled = false;
             this.btLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btLuu.ImageIndex = 1;
             this.btLuu.ImageList = this.imageListButton;
@@ -272,6 +259,22 @@
             this.txtTimkiem.Text = "Mời nhập mã nv...";
             this.txtTimkiem.Click += new System.EventHandler(this.txtTimkiem_Click);
             // 
+            // cmbMaNV
+            // 
+            this.cmbMaNV.FormattingEnabled = true;
+            this.cmbMaNV.Location = new System.Drawing.Point(306, 71);
+            this.cmbMaNV.Name = "cmbMaNV";
+            this.cmbMaNV.Size = new System.Drawing.Size(220, 24);
+            this.cmbMaNV.TabIndex = 21;
+            // 
+            // txtChuthich
+            // 
+            this.txtChuthich.Location = new System.Drawing.Point(678, 34);
+            this.txtChuthich.Multiline = true;
+            this.txtChuthich.Name = "txtChuthich";
+            this.txtChuthich.Size = new System.Drawing.Size(240, 80);
+            this.txtChuthich.TabIndex = 4;
+            // 
             // FrmChamCong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -298,9 +301,7 @@
         private System.Windows.Forms.ImageList imageListButton;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DateTimePicker dTPThoigian;
-        private System.Windows.Forms.TextBox txtChuthich;
         private System.Windows.Forms.TextBox txtMaCC;
-        private System.Windows.Forms.TextBox txtMaNV;
         private System.Windows.Forms.Label lblMaNV;
         private System.Windows.Forms.Label lblChuthich;
         private System.Windows.Forms.Label lblThoiGian;
@@ -314,5 +315,7 @@
         private System.Windows.Forms.DataGridView dgvChamCong;
         private System.Windows.Forms.Button btLuu;
         private System.Windows.Forms.Button btDS;
+        private System.Windows.Forms.ComboBox cmbMaNV;
+        private System.Windows.Forms.TextBox txtChuthich;
     }
 }

@@ -46,6 +46,8 @@ namespace GUI_QLNhanSu
             txtTenSC.Text = null;
             txtThiethai.Text = null;
             cmbLoaiSC.Text = null;
+            btLuu.Enabled = false;
+            btSua.Enabled = false;
         }
         void LoadGridView_SuCo()
         {
@@ -70,6 +72,8 @@ namespace GUI_QLNhanSu
         private void btThem_Click(object sender, EventArgs e)
         {
             OpenText();
+            btLuu.Enabled = true;
+            btSua.Enabled = false;
         }
 
         private void btLuu_Click(object sender, EventArgs e)
@@ -112,6 +116,8 @@ namespace GUI_QLNhanSu
 
         private void dgvSuco_Click(object sender, EventArgs e)
         {
+            btLuu.Enabled = false;
+            btSua.Enabled = true;
             txtMaSC.Enabled = false;
             cmbMaNV.Enabled = true;
             cmbLoaiSC.Enabled = true;

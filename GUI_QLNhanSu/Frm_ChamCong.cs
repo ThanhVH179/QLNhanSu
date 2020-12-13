@@ -19,24 +19,26 @@ namespace GUI_QLNhanSu
             InitializeComponent();
         }
         Bus_ChamCong busChamCong = new Bus_ChamCong();
+        BUS_NhanVien busnv = new BUS_NhanVien();
         void CloseTextbox()
         {
             dTPThoigian.Enabled = false;
             txtMaCC.Enabled = false;
-            txtMaNV.Enabled = false;
+            cmbMaNV.Enabled = false;
             txtChuthich.Enabled = false;
             txtMaCC.Text = null;
-            txtMaNV.Text = null;
+            cmbMaNV.Text = null;
             txtChuthich.Text = null;
+            btLuu.Enabled = false;
         }
         void OpenTextbox()
         {
             dTPThoigian.Enabled = true;
             txtMaCC.Enabled = true;
-            txtMaNV.Enabled = true;
+            cmbMaNV.Enabled = true;
             txtChuthich.Enabled = true;
             txtMaCC.Text = null;
-            txtMaNV.Text = null;
+            cmbMaNV.Text = null;
             txtChuthich.Text = null;
         }
         void LoadGridView_ChamCong()
@@ -50,6 +52,8 @@ namespace GUI_QLNhanSu
 
         private void FrmChamCong_Load(object sender, EventArgs e)
         {
+            cmbMaNV.DataSource = busnv.DanhSachMaNV();
+            cmbMaNV.ValueMember = "manv";
             LoadGridView_ChamCong();
             CloseTextbox();
             txtTimkiem.Text = "Mời nhập mã nv...";
@@ -59,6 +63,7 @@ namespace GUI_QLNhanSu
         private void btThem_Click(object sender, EventArgs e)
         {
             OpenTextbox();
+            btLuu.Enabled = true;
         }
 
         private void txtTimkiem_Click(object sender, EventArgs e)
@@ -69,9 +74,9 @@ namespace GUI_QLNhanSu
 
         private void btLuu_Click(object sender, EventArgs e)
         {
-            if (txtMaCC.Text != "" || txtMaNV.Text != "" || txtChuthich.Text != "")
+            if (txtMaCC.Text != "" || cmbMaNV.Text != "" || txtChuthich.Text != "")
             {
-                DTO_ChamCong chamcong = new DTO_ChamCong(txtMaCC.Text, txtMaNV.Text, dTPThoigian.Value, txtChuthich.Text );
+                DTO_ChamCong chamcong = new DTO_ChamCong(txtMaCC.Text, cmbMaNV.Text, dTPThoigian.Value, txtChuthich.Text );
                 if (busChamCong.InsertChamCong(chamcong))
                 {
                     MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -125,17 +130,24 @@ namespace GUI_QLNhanSu
             {
                 MessageBox.Show("Không tìm thấy dữ liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            txtTimkiem.Text = "Mời nhập tên phòng ...";
+            txtTimkiem.Text = "Mời nhập mã nv ...";
             txtTimkiem.BackColor = Color.LightGray;
         }
 
         private void dgvChamCong_Click(object sender, EventArgs e)
         {
+            btLuu.Enabled = false;
             DataGridViewRow row = dgvChamCong.CurrentRow;
             txtMaCC.Text = row.Cells[0].Value.ToString();
-            txtMaNV.Text = row.Cells[1].Value.ToString();
+            cmbMaNV.Text = row.Cells[1].Value.ToString();
             dTPThoigian.Text = row.Cells[2].Value.ToString();
             txtChuthich.Text = row.Cells[3].Value.ToString();
+        }
+
+        private void btDS_Click(object sender, EventArgs e)
+        {
+            LoadGridView_ChamCong();
+            CloseTextbox();
         }
     }
 }

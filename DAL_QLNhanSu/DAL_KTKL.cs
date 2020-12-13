@@ -67,9 +67,9 @@ namespace DAL_QLNhanSu
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = "sp_UpdateDataIntoKTKL";
                 cmd.Parameters.AddWithValue("maKTKL", ktkl.maKTKL);
+                cmd.Parameters.AddWithValue("maNV", ktkl.maNV);
                 cmd.Parameters.AddWithValue("loai", ktkl.loai);
                 cmd.Parameters.AddWithValue("moTa", ktkl.moTa);
-                cmd.Parameters.AddWithValue("maNV", ktkl.maNV);
                 if (cmd.ExecuteNonQuery() > 0)
                 {
                     return true;

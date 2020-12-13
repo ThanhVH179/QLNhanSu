@@ -119,6 +119,8 @@ namespace GUI_QLNhanSu
             txtSDT.Text = null;
             txtHinh.Text = null;
             cmbGT.Text = null;
+            btLuu.Enabled = false;
+            btSua.Enabled = false;
         }
 
         void LoadGridView_NV()
@@ -142,6 +144,8 @@ namespace GUI_QLNhanSu
 
         private void FrmNhanVien_Load(object sender, EventArgs e)
         {
+            txtTimKiem.Text = "Mời nhập tên nv ...";
+            txtTimKiem.BackColor = Color.LightGray;
             LoadGridView_NV();
             ComboBoxValues();
             CloseTextbox();
@@ -149,6 +153,8 @@ namespace GUI_QLNhanSu
         private void btThem_Click(object sender, EventArgs e)
         {
             OpenTextbox();
+            btLuu.Enabled = true;
+            btSua.Enabled = false;
         }
 
         private void btHinh_Click(object sender, EventArgs e)
@@ -219,6 +225,8 @@ namespace GUI_QLNhanSu
 
         private void dgvNhanVien_Click(object sender, EventArgs e)
         {
+            btLuu.Enabled = false;
+            btSua.Enabled = true;
             string saveDirectory = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10));
             if (dgvNhanVien.Rows.Count > 0)
             {
@@ -290,6 +298,48 @@ namespace GUI_QLNhanSu
             {
                 MessageBox.Show("Hãy chọn nhân viên muốn xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void btTimKiem_Click(object sender, EventArgs e)
+        {
+            string nv = txtTimKiem.Text;
+            DataTable ds = busNhanVien.SearchNhanVien(nv);
+            if (ds.Rows.Count > 0)
+            {
+                dgvNhanVien.DataSource = ds;
+                dgvNhanVien.Columns[0].HeaderText = "Mã NV";
+                dgvNhanVien.Columns[1].HeaderText = "Tên";
+                dgvNhanVien.Columns[2].HeaderText = "Email";
+                dgvNhanVien.Columns[3].HeaderText = "Ngày sinh";
+                dgvNhanVien.Columns[4].HeaderText = "Quê quán";
+                dgvNhanVien.Columns[5].HeaderText = "Giới tính";
+                dgvNhanVien.Columns[6].HeaderText = "Dân tộc";
+                dgvNhanVien.Columns[7].HeaderText = "Số điện thoại";
+                dgvNhanVien.Columns[8].HeaderText = "Mã phòng";
+                dgvNhanVien.Columns[9].HeaderText = "Chức vụ";
+                dgvNhanVien.Columns[10].HeaderText = "Vai trò";
+                dgvNhanVien.Columns[11].HeaderText = "Học vấn";
+                dgvNhanVien.Columns[12].HeaderText = "Bậc lương";
+                dgvNhanVien.Columns[13].HeaderText = "Hình";
+            }
+            else
+            {
+                MessageBox.Show("Không tìm thấy dữ liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            txtTimKiem.Text = "Mời nhập tên nhân viên ...";
+            txtTimKiem.BackColor = Color.LightGray;
+        }
+
+        private void txtTimKiem_Click(object sender, EventArgs e)
+        {
+            txtTimKiem.Text = null;
+            txtTimKiem.BackColor = Color.White;
+        }
+
+        private void btDS_Click(object sender, EventArgs e)
+        {
+            LoadGridView_NV();
+            CloseTextbox();
         }
     }
 }

@@ -34,13 +34,14 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtMoTa = new System.Windows.Forms.TextBox();
             this.lblMota = new System.Windows.Forms.Label();
+            this.cmbMaNV = new System.Windows.Forms.ComboBox();
             this.cmbLoai = new System.Windows.Forms.ComboBox();
             this.lblLoai = new System.Windows.Forms.Label();
             this.txtMaKTKL = new System.Windows.Forms.TextBox();
             this.lblMaKTKL = new System.Windows.Forms.Label();
             this.lblMaNV = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvKTKL = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btDS = new System.Windows.Forms.Button();
             this.btXoa = new System.Windows.Forms.Button();
@@ -49,10 +50,9 @@
             this.btThem = new System.Windows.Forms.Button();
             this.btTimKiem = new System.Windows.Forms.Button();
             this.txtTimkiem = new System.Windows.Forms.TextBox();
-            this.cmbMaNV = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKTKL)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -100,6 +100,17 @@
             this.lblMota.Size = new System.Drawing.Size(50, 18);
             this.lblMota.TabIndex = 19;
             this.lblMota.Text = "Mô tả:";
+            // 
+            // cmbMaNV
+            // 
+            this.cmbMaNV.FormattingEnabled = true;
+            this.cmbMaNV.Items.AddRange(new object[] {
+            "Khen thưởng",
+            "Kỷ luật"});
+            this.cmbMaNV.Location = new System.Drawing.Point(422, 70);
+            this.cmbMaNV.Name = "cmbMaNV";
+            this.cmbMaNV.Size = new System.Drawing.Size(180, 24);
+            this.cmbMaNV.TabIndex = 18;
             // 
             // cmbLoai
             // 
@@ -151,23 +162,28 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Controls.Add(this.dgvKTKL);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 165);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1382, 348);
             this.panel2.TabIndex = 33;
             // 
-            // dataGridView1
+            // dgvKTKL
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1382, 348);
-            this.dataGridView1.TabIndex = 17;
+            this.dgvKTKL.AllowUserToAddRows = false;
+            this.dgvKTKL.AllowUserToDeleteRows = false;
+            this.dgvKTKL.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvKTKL.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvKTKL.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvKTKL.Location = new System.Drawing.Point(0, 0);
+            this.dgvKTKL.Name = "dgvKTKL";
+            this.dgvKTKL.RowHeadersVisible = false;
+            this.dgvKTKL.RowHeadersWidth = 51;
+            this.dgvKTKL.RowTemplate.Height = 24;
+            this.dgvKTKL.Size = new System.Drawing.Size(1382, 348);
+            this.dgvKTKL.TabIndex = 17;
+            this.dgvKTKL.Click += new System.EventHandler(this.dgvKTKL_Click);
             // 
             // panel3
             // 
@@ -196,6 +212,7 @@
             this.btDS.Text = "Danh sách";
             this.btDS.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btDS.UseVisualStyleBackColor = true;
+            this.btDS.Click += new System.EventHandler(this.btDS_Click);
             // 
             // btXoa
             // 
@@ -209,9 +226,11 @@
             this.btXoa.Text = "Xóa";
             this.btXoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btXoa.UseVisualStyleBackColor = true;
+            this.btXoa.Click += new System.EventHandler(this.btXoa_Click);
             // 
             // btSua
             // 
+            this.btSua.Enabled = false;
             this.btSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btSua.ImageIndex = 2;
             this.btSua.ImageList = this.imageList1;
@@ -222,9 +241,11 @@
             this.btSua.Text = "Sửa";
             this.btSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btSua.UseVisualStyleBackColor = true;
+            this.btSua.Click += new System.EventHandler(this.btSua_Click);
             // 
             // btLuu
             // 
+            this.btLuu.Enabled = false;
             this.btLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btLuu.ImageIndex = 1;
             this.btLuu.ImageList = this.imageList1;
@@ -235,6 +256,7 @@
             this.btLuu.Text = "Lưu";
             this.btLuu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btLuu.UseVisualStyleBackColor = true;
+            this.btLuu.Click += new System.EventHandler(this.btLuu_Click);
             // 
             // btThem
             // 
@@ -248,6 +270,7 @@
             this.btThem.Text = "Thêm";
             this.btThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btThem.UseVisualStyleBackColor = true;
+            this.btThem.Click += new System.EventHandler(this.btThem_Click);
             // 
             // btTimKiem
             // 
@@ -261,6 +284,7 @@
             this.btTimKiem.Text = "Tìm kiếm";
             this.btTimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btTimKiem.UseVisualStyleBackColor = true;
+            this.btTimKiem.Click += new System.EventHandler(this.btTimKiem_Click);
             // 
             // txtTimkiem
             // 
@@ -268,17 +292,7 @@
             this.txtTimkiem.Name = "txtTimkiem";
             this.txtTimkiem.Size = new System.Drawing.Size(250, 22);
             this.txtTimkiem.TabIndex = 37;
-            // 
-            // cmbMaNV
-            // 
-            this.cmbMaNV.FormattingEnabled = true;
-            this.cmbMaNV.Items.AddRange(new object[] {
-            "Khen thưởng",
-            "Kỷ luật"});
-            this.cmbMaNV.Location = new System.Drawing.Point(422, 70);
-            this.cmbMaNV.Name = "cmbMaNV";
-            this.cmbMaNV.Size = new System.Drawing.Size(180, 24);
-            this.cmbMaNV.TabIndex = 18;
+            this.txtTimkiem.Click += new System.EventHandler(this.txtTimkiem_Click);
             // 
             // FrmKTKL
             // 
@@ -291,10 +305,11 @@
             this.Name = "FrmKTKL";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Khen thưởng & Kỷ luật";
+            this.Load += new System.EventHandler(this.FrmKTKL_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKTKL)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
@@ -310,7 +325,7 @@
         private System.Windows.Forms.Label lblLoai;
         private System.Windows.Forms.Label lblMaNV;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvKTKL;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btXoa;
         private System.Windows.Forms.Button btSua;

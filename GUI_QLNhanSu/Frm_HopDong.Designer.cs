@@ -35,6 +35,7 @@
             this.lblLoaiHD = new System.Windows.Forms.Label();
             this.txtMaHD = new System.Windows.Forms.TextBox();
             this.lblMaHD = new System.Windows.Forms.Label();
+            this.cmbMaNV = new System.Windows.Forms.ComboBox();
             this.cmbLoaiHD = new System.Windows.Forms.ComboBox();
             this.dtpNgayKetThuc = new System.Windows.Forms.DateTimePicker();
             this.dtpNgayKi = new System.Windows.Forms.DateTimePicker();
@@ -49,7 +50,6 @@
             this.btThem = new System.Windows.Forms.Button();
             this.btTimKiem = new System.Windows.Forms.Button();
             this.txtTimkiem = new System.Windows.Forms.TextBox();
-            this.cmbMaNV = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHopDong)).BeginInit();
@@ -112,11 +112,22 @@
             this.lblMaHD.TabIndex = 29;
             this.lblMaHD.Text = "Mã HD:";
             // 
+            // cmbMaNV
+            // 
+            this.cmbMaNV.FormattingEnabled = true;
+            this.cmbMaNV.Items.AddRange(new object[] {
+            "Hợp đồng vô thời hạn",
+            "Hợp đồng có thời hạn",
+            "Hợp đồng thời vụ"});
+            this.cmbMaNV.Location = new System.Drawing.Point(640, 14);
+            this.cmbMaNV.Name = "cmbMaNV";
+            this.cmbMaNV.Size = new System.Drawing.Size(229, 24);
+            this.cmbMaNV.TabIndex = 2;
+            // 
             // cmbLoaiHD
             // 
             this.cmbLoaiHD.FormattingEnabled = true;
             this.cmbLoaiHD.Items.AddRange(new object[] {
-            "Hợp đồng vô thời hạn",
             "Hợp đồng có thời hạn",
             "Hợp đồng thời vụ"});
             this.cmbLoaiHD.Location = new System.Drawing.Point(256, 75);
@@ -182,14 +193,19 @@
             // 
             // dgvHopDong
             // 
+            this.dgvHopDong.AllowUserToAddRows = false;
+            this.dgvHopDong.AllowUserToDeleteRows = false;
+            this.dgvHopDong.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvHopDong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHopDong.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvHopDong.Location = new System.Drawing.Point(0, 0);
             this.dgvHopDong.Name = "dgvHopDong";
+            this.dgvHopDong.RowHeadersVisible = false;
             this.dgvHopDong.RowHeadersWidth = 51;
             this.dgvHopDong.RowTemplate.Height = 24;
             this.dgvHopDong.Size = new System.Drawing.Size(1290, 336);
             this.dgvHopDong.TabIndex = 25;
+            this.dgvHopDong.Click += new System.EventHandler(this.dgvHopDong_Click);
             // 
             // panel3
             // 
@@ -216,9 +232,11 @@
             this.btDS.Text = "Danh sách";
             this.btDS.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btDS.UseVisualStyleBackColor = true;
+            this.btDS.Click += new System.EventHandler(this.btDS_Click);
             // 
             // btLuu
             // 
+            this.btLuu.Enabled = false;
             this.btLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btLuu.ImageIndex = 1;
             this.btLuu.ImageList = this.imageListBt;
@@ -229,6 +247,7 @@
             this.btLuu.Text = "Lưu";
             this.btLuu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btLuu.UseVisualStyleBackColor = true;
+            this.btLuu.Click += new System.EventHandler(this.btLuu_Click);
             // 
             // btThem
             // 
@@ -242,6 +261,7 @@
             this.btThem.Text = "Thêm";
             this.btThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btThem.UseVisualStyleBackColor = true;
+            this.btThem.Click += new System.EventHandler(this.btThem_Click);
             // 
             // btTimKiem
             // 
@@ -255,6 +275,7 @@
             this.btTimKiem.Text = "Tìm kiếm";
             this.btTimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btTimKiem.UseVisualStyleBackColor = true;
+            this.btTimKiem.Click += new System.EventHandler(this.btTimKiem_Click);
             // 
             // txtTimkiem
             // 
@@ -262,18 +283,7 @@
             this.txtTimkiem.Name = "txtTimkiem";
             this.txtTimkiem.Size = new System.Drawing.Size(250, 22);
             this.txtTimkiem.TabIndex = 7;
-            // 
-            // cmbMaNV
-            // 
-            this.cmbMaNV.FormattingEnabled = true;
-            this.cmbMaNV.Items.AddRange(new object[] {
-            "Hợp đồng vô thời hạn",
-            "Hợp đồng có thời hạn",
-            "Hợp đồng thời vụ"});
-            this.cmbMaNV.Location = new System.Drawing.Point(640, 14);
-            this.cmbMaNV.Name = "cmbMaNV";
-            this.cmbMaNV.Size = new System.Drawing.Size(229, 24);
-            this.cmbMaNV.TabIndex = 2;
+            this.txtTimkiem.Click += new System.EventHandler(this.txtTimkiem_Click);
             // 
             // FrmHopDong
             // 
@@ -286,6 +296,7 @@
             this.Name = "FrmHopDong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hợp đồng";
+            this.Load += new System.EventHandler(this.FrmHopDong_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

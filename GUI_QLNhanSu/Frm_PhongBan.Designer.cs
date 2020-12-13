@@ -41,13 +41,13 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvPhongBan = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btDS = new System.Windows.Forms.Button();
             this.btTimKiem = new System.Windows.Forms.Button();
             this.btXoa = new System.Windows.Forms.Button();
             this.btSua = new System.Windows.Forms.Button();
             this.btLuu = new System.Windows.Forms.Button();
             this.btThem = new System.Windows.Forms.Button();
             this.txtTimkiem = new System.Windows.Forms.TextBox();
-            this.btDS = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhongBan)).BeginInit();
@@ -170,6 +170,20 @@
             this.panel3.Size = new System.Drawing.Size(1382, 93);
             this.panel3.TabIndex = 36;
             // 
+            // btDS
+            // 
+            this.btDS.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btDS.ImageIndex = 5;
+            this.btDS.ImageList = this.imageList1;
+            this.btDS.Location = new System.Drawing.Point(1106, 26);
+            this.btDS.Name = "btDS";
+            this.btDS.Size = new System.Drawing.Size(125, 40);
+            this.btDS.TabIndex = 45;
+            this.btDS.Text = "Danh sách";
+            this.btDS.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btDS.UseVisualStyleBackColor = true;
+            this.btDS.Click += new System.EventHandler(this.btDS_Click);
+            // 
             // btTimKiem
             // 
             this.btTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -200,6 +214,7 @@
             // 
             // btSua
             // 
+            this.btSua.Enabled = false;
             this.btSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btSua.ImageIndex = 2;
             this.btSua.ImageList = this.imageList1;
@@ -214,6 +229,7 @@
             // 
             // btLuu
             // 
+            this.btLuu.Enabled = false;
             this.btLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btLuu.ImageIndex = 1;
             this.btLuu.ImageList = this.imageList1;
@@ -249,19 +265,6 @@
             this.txtTimkiem.TabIndex = 5;
             this.txtTimkiem.Text = "Mời nhập tên phòng ... ";
             this.txtTimkiem.Click += new System.EventHandler(this.txtTimkiem_Click);
-            // 
-            // btDS
-            // 
-            this.btDS.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btDS.ImageIndex = 5;
-            this.btDS.ImageList = this.imageList1;
-            this.btDS.Location = new System.Drawing.Point(1106, 26);
-            this.btDS.Name = "btDS";
-            this.btDS.Size = new System.Drawing.Size(125, 40);
-            this.btDS.TabIndex = 45;
-            this.btDS.Text = "Danh sách";
-            this.btDS.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btDS.UseVisualStyleBackColor = true;
             // 
             // FrmPhongBan
             // 

@@ -230,7 +230,7 @@ namespace DAL_QLNhanSu
             }
             return false;
         }
-        public DataTable searchNhanVien(string hoten)
+        public DataTable searchNhanVien(string ten)
         {
             try
             {
@@ -239,7 +239,7 @@ namespace DAL_QLNhanSu
                 cmd.Connection = conn;
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = "sp_TimNhanVien";
-                cmd.Parameters.AddWithValue("hoten", hoten);
+                cmd.Parameters.AddWithValue("NV", ten);
                 DataTable dt = new DataTable();
                 dt.Load(cmd.ExecuteReader());
                 return dt;
